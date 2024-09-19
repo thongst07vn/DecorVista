@@ -146,7 +146,7 @@
   position: relative;
   width: 100%;
   height: 616px;
-  background-image: url(../../../img/bg.png);
+  background-color: white;
   border-bottom-right-radius: 8px;
   border-top-right-radius: 8px;
   height: calc(100vh - 158px);
@@ -486,6 +486,7 @@
   margin: auto;
   width: 100%;
   height: calc(100% - 138px);
+  border: 1px solid #e0e6ed;
   overflow: auto;
 }
 .chat-system .chat-box .chat-box-inner .chat-conversation-box .chat {
@@ -617,10 +618,10 @@
   -webkit-transform: rotate(29deg) skew(-35deg);
   transform: rotate(29deg) skew(-35deg);
 }
-.chat-system .chat-box .bubble.you {
+.chat-system .chat-box .bubble.you {  
   float: left;
-  color: #0e1726;
-  background-color: #fff;
+  color: #000;
+  background: #ededed;
   -webkit-align-self: flex-start;
   align-self: flex-start;
   -moz-animation-name: slideFromLeft;
@@ -632,12 +633,12 @@
 }
 .chat-system .chat-box .bubble.you:before {
   left: -3px;
-  background-color: #fff;
+  background-color: #ededed;
 }
 .chat-system .chat-box .bubble.me {
   float: right;
-  color: #fff;
-  background-color: #4361ee;
+  color: #000;
+  background-color: #cffad2;
   -webkit-align-self: flex-end;
   align-self: flex-end;
   -moz-animation-name: slideFromRight;
@@ -649,7 +650,7 @@
 }
 .chat-system .chat-box .bubble.me:before {
   right: -3px;
-  background-color: #4361ee;
+  background-color: #cffad2;
 }
 .chat-system .chat-box .conversation-start {
   position: relative;

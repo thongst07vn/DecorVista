@@ -45,7 +45,7 @@ body.dark .paginating-container li:not(:last-child) {
     Default Style
 */
 body.dark .pagination-default li {
-  border: 2px solid #191e3a;
+  border: 2px solid #193A2D;
 }
 body.dark .pagination-default li:hover {
   border: 2px solid #009688 !important;
@@ -61,7 +61,7 @@ body.dark .pagination-default li a.active:hover, body.dark .pagination-default l
   color: #009688;
 }
 body.dark .pagination-default .prev {
-  border: 2px solid #191e3a;
+  border: 2px solid #193A2D;
 }
 body.dark .pagination-default .prev:hover {
   border: 2px solid #009688;
@@ -70,7 +70,7 @@ body.dark .pagination-default .prev:hover a, body.dark .pagination-default .prev
   color: #009688;
 }
 body.dark .pagination-default .next {
-  border: 2px solid #191e3a;
+  border: 2px solid #193A2D;
 }
 body.dark .pagination-default .next:hover {
   border: 2px solid #009688;
@@ -83,7 +83,7 @@ body.dark .pagination-default .next:hover a, body.dark .pagination-default .next
     Solid Style
 */
 body.dark .pagination-solid li {
-  background-color: #191e3a;
+  background-color: #193A2D;
 }
 body.dark .pagination-solid li:hover a {
   color: #009688;
@@ -96,7 +96,7 @@ body.dark .pagination-solid li a.active:hover, body.dark .pagination-solid li.ac
   color: #fff;
 }
 body.dark .pagination-solid .prev {
-  background-color: #191e3a;
+  background-color: #193A2D;
 }
 body.dark .pagination-solid .prev:hover {
   background-color: #009688;
@@ -105,7 +105,7 @@ body.dark .pagination-solid .prev:hover a, body.dark .pagination-solid .prev:hov
   color: #fff;
 }
 body.dark .pagination-solid .next {
-  background-color: #191e3a;
+  background-color: #193A2D;
 }
 body.dark .pagination-solid .next:hover {
   background-color: #009688;
@@ -125,7 +125,7 @@ body.dark .pagination-no_spacing {
   margin-bottom: 0;
 }
 body.dark .pagination-no_spacing .prev {
-  background-color: #191e3a;
+  background-color: #193A2D;
   border-radius: 50%;
   padding: 10px 11px;
   margin-right: 5px;
@@ -137,7 +137,7 @@ body.dark .pagination-no_spacing .prev:hover svg {
   color: #fff;
 }
 body.dark .pagination-no_spacing .next {
-  background-color: #191e3a;
+  background-color: #193A2D;
   border-radius: 50%;
   padding: 10px 11px;
   margin-left: 5px;
@@ -157,7 +157,7 @@ body.dark .pagination-no_spacing .pagination {
   margin-bottom: 0;
 }
 body.dark .pagination-no_spacing li {
-  background-color: #191e3a;
+  background-color: #193A2D;
   padding: 10px 0;
   font-weight: 600;
   color: #888ea8;
@@ -201,7 +201,7 @@ body.dark .pagination-custom_solid {
   margin-bottom: 0;
 }
 body.dark .pagination-custom_solid .prev {
-  background-color: #191e3a;
+  background-color: #193A2D;
   border-radius: 50%;
   padding: 10px 11px;
   margin-right: 25px;
@@ -213,7 +213,7 @@ body.dark .pagination-custom_solid .prev:hover svg {
   color: #fff;
 }
 body.dark .pagination-custom_solid .next {
-  background-color: #191e3a;
+  background-color: #193A2D;
   border-radius: 50%;
   padding: 10px 11px;
   margin-left: 25px;
@@ -233,7 +233,7 @@ body.dark .pagination-custom_solid .pagination {
   margin-bottom: 0;
 }
 body.dark .pagination-custom_solid li {
-  background-color: #191e3a;
+  background-color: #193A2D;
   padding: 10px 0;
   font-weight: 600;
   color: #888ea8;
@@ -272,7 +272,7 @@ body.dark .pagination-custom_outline {
   margin-bottom: 0;
 }
 body.dark .pagination-custom_outline .prev {
-  border: 2px solid #191e3a;
+  border: 2px solid #193A2D;
   border-radius: 50%;
   padding: 8px 11px;
   margin-right: 25px;
@@ -284,7 +284,7 @@ body.dark .pagination-custom_outline .prev:hover svg {
   color: #009688;
 }
 body.dark .pagination-custom_outline .next {
-  border: 2px solid #191e3a;
+  border: 2px solid #193A2D;
   border-radius: 50%;
   padding: 8px 11px;
   margin-left: 25px;
@@ -307,10 +307,10 @@ body.dark .pagination-custom_outline li {
   padding: 10px 0;
   font-weight: 600;
   color: #888ea8;
-  border: 1px solid #191e3a;
+  border: 1px solid #193A2D;
 }
 body.dark .pagination-custom_outline li.active {
-  background-color: #191e3a;
+  background-color: #193A2D;
 }
 body.dark .pagination-custom_outline li:first-child {
   border-top-left-radius: 50px;
@@ -329,7 +329,7 @@ body.dark .pagination-custom_outline li a:hover {
   color: #009688;
 }
 body.dark .pagination-custom_outline li.active a {
-  background-color: #191e3a;
+  background-color: #193A2D;
   border: 2px solid #009688 !important;
   border-radius: 6px;
   color: #009688;

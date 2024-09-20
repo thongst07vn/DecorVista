@@ -12,6 +12,10 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   }
 })
 export class UserHeaderComponent {
+  user: any
+  ngOnInit():void{
+    this.user = JSON.parse(sessionStorage.getItem("loggedInUser"))
+  }
 
   logOut(){
     google.accounts.id.disableAutoSelect()

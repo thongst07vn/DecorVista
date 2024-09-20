@@ -1,9 +1,11 @@
 declare var google : any  
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Conect } from '../../conect';
 import { FormsModule } from '@angular/forms';
 import * as JSBase64 from 'js-base64'
+import { HttpClient } from '@angular/common/http';
+import { UserSevice } from '../services/user.service';
 @Component({
   standalone: true,
   imports: [RouterOutlet,RouterLink,FormsModule],
@@ -15,8 +17,12 @@ import * as JSBase64 from 'js-base64'
 export class LoginComponent implements OnInit {
   username: string
   password: string
+  imageURL : string
+  selectFile : any
   constructor(
     private conect: Conect,
+    private http : HttpClient,
+    private userServie: UserSevice
     // private authService : AuthGoogleService
   ){}
   ngOnInit(): void {
@@ -75,6 +81,20 @@ export class LoginComponent implements OnInit {
       // this.router.navigate(['/admin/dashboard'])
     }
   }
+  // async downloadImage(url: string) {
+  //   this.http.get(url, { responseType: 'blob' })
+  //     .subscribe(blob => {
+  //       const reader = new FileReader();
+  //       console.log(reader)
+  //       // this.selectFile = reader
+  //       reader.onloadend = () => {
+  //         this.imageURL = reader.result as string;
+  //         // console.log(this.imageURL)
+
+  //       };
+  //       reader.readAsDataURL(blob);
+  //     });
+  // }
   decodeToken(token:string){
     const base64URL = token.split(".")[1]
     const base64 = base64URL.replace(/-/g,'+').replace(/_/g,'/')
@@ -88,8 +108,45 @@ export class LoginComponent implements OnInit {
   handleLogin(resp:any){
     // this.authService.login()
     const payLoad = this.decodeToken(resp.credential)
-    console.log(payLoad.name)
-    sessionStorage.setItem("loggedInUser",JSON.stringify(payLoad))
-    window.location.href = 'user/home'  
+    // const file = this.convertToFile(payLoad.picture)
+    // this.downloadImage(payLoad.picture)
+    console.log(this.imageURL)
+    const account = {
+      email: payLoad.email,
+      username: payLoad.name,
+      avatar: 'noimg.jpg',
+      role: 1 
+    }
+    this.userServie.findbyemail(account.email).then(
+      res=>{
+        if(res['result']){
+          sessionStorage.setItem("loggedInUser",JSON.stringify(account.email))
+          window.location.href = 'user/home'
+        }else{
+          let s = JSON.stringify(account);
+          let formData = new FormData();
+
+          formData.append('avt', payLoad.picture);
+          formData.append('usergg',s);
+          this.userServie.siginWithGG(formData).then(
+              res =>{
+                  if(res['result']){
+                    // console.log(account)
+                    sessionStorage.setItem("loggedInUser",JSON.stringify(account.email))
+                    window.location.href = 'user/home' 
+                  } else {
+                      console.log('failed');
+                  }
+              },
+              error => {
+                  console.log(error);
+              }
+          )
+        }
+      }
+    )
+    
+    
   }
+
 }

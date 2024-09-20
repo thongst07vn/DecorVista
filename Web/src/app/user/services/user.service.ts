@@ -6,7 +6,7 @@ import { BaseURLService } from "./baseURL.service";
 @Injectable({
     providedIn: 'root'
 })
-export class UserSevice{
+export class UserService{
     constructor(
         private httpClient: HttpClient,
         private baseUrlService : BaseURLService
@@ -14,7 +14,13 @@ export class UserSevice{
     async siginWithGG(formData:FormData){
         return lastValueFrom(this.httpClient.post(this.baseUrlService.BASE_URL+'user/siginwithgg',formData))
     }
+    async register(formData: FormData){
+        return lastValueFrom(this.httpClient.post(this.baseUrlService.BASE_URL + 'user/register', formData));
+    }
     async findbyemail(email: string){
         return lastValueFrom(this.httpClient.get(this.baseUrlService.BASE_URL + 'user/findbyemail/'+email));
+    }
+    async login(email: string, password:string){
+        return lastValueFrom(this.httpClient.post(this.baseUrlService.BASE_URL + 'user/login/',{email,password}));
     }
 }

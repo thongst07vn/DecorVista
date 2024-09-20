@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Conect } from '../../../conect';
-import { UserSevice } from '../../services/user.service';
+import { UserService } from '../../services/user.service';
 import { User } from '../../entities/user.entity';
 
 
@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit {
   user:User
   constructor(
     private conect : Conect,
-    private userService: UserSevice
+    private userService: UserService
   ){}
   ngOnInit(): void {
     console.log(JSON.parse(sessionStorage.getItem("loggedInUser")))

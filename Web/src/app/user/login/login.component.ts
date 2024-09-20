@@ -5,7 +5,8 @@ import { Conect } from '../../conect';
 import { FormsModule } from '@angular/forms';
 import * as JSBase64 from 'js-base64'
 import { HttpClient } from '@angular/common/http';
-import { UserSevice } from '../services/user.service';
+import { UserService } from '../services/user.service';
+import { DesignerService } from '../services/designer.service';
 @Component({
   standalone: true,
   imports: [RouterOutlet,RouterLink,FormsModule],
@@ -22,7 +23,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private conect: Conect,
     private http : HttpClient,
-    private userServie: UserSevice
+    private userService: UserService,
+    private designerService : DesignerService
     // private authService : AuthGoogleService
   ){}
   ngOnInit(): void {
@@ -73,13 +75,35 @@ export class LoginComponent implements OnInit {
     this.conect.addScriptAsync("layouts/horizontal-light-menu/alert.js")
   }
   login(){
-    // console.log("hehe")
-    if(this.username == 'user' && this.password == '123'){
-      this.conect.removeScript("src/plugins/src/sweetalerts2/sweetalerts2.min.js")
-      this.conect.removeScript("layouts/horizontal-light-menu/alert.js")
-      window.location.href = '/user/home'
-      // this.router.navigate(['/admin/dashboard'])
-    }
+    this.userService.findbyemail(this.username).then(
+      res => {
+        if(res['result']){
+          this.userService.login(this.username,this.password).then(
+            res => {
+              if(res['result']){
+                sessionStorage.setItem("loggedInUser",this.username)
+                window.location.href = 'user/home'
+              }
+            }
+          )
+        } else {
+          this.designerService.findbyemail(this.username).then(
+            res => {
+              if(res['result']){
+                this.designerService.login(this.username,this.password).then(
+                  res => {
+                    if(res['result']){
+                      sessionStorage.setItem("loggedInUser",this.username)
+                      window.location.href = 'user/home'
+                    }
+                  }
+                )
+              }
+            }
+          )
+        }
+      }
+    )
   }
   // async downloadImage(url: string) {
   //   this.http.get(url, { responseType: 'blob' })
@@ -117,7 +141,7 @@ export class LoginComponent implements OnInit {
       avatar: 'noimg.jpg',
       role: 1 
     }
-    this.userServie.findbyemail(account.email).then(
+    this.userService.findbyemail(account.email).then(
       res=>{
         if(res['result']){
           sessionStorage.setItem("loggedInUser",JSON.stringify(account.email))
@@ -128,7 +152,7 @@ export class LoginComponent implements OnInit {
 
           formData.append('avt', payLoad.picture);
           formData.append('usergg',s);
-          this.userServie.siginWithGG(formData).then(
+          this.userService.siginWithGG(formData).then(
               res =>{
                   if(res['result']){
                     // console.log(account)

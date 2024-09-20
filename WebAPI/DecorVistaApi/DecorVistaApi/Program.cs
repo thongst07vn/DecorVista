@@ -16,6 +16,7 @@ string connectionString = builder.Configuration["ConnectionStrings:DefaultConnec
 builder.Services.AddDbContext<DatabaseContext>(option => option.UseLazyLoadingProxies().UseSqlServer(connectionString));
 builder.Services.AddScoped<UserService, UserServiceImpl>();
 builder.Services.AddScoped<ProductsService, ProductsServiceImpl>();
+builder.Services.AddScoped<DesignerService, DesignerServiceImpl>();
 
 
 

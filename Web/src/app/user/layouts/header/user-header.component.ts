@@ -2,7 +2,7 @@ declare var google :any
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { User } from '../../entities/user.entity';
-import { UserSevice } from '../../services/user.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'user-header',
@@ -16,7 +16,7 @@ import { UserSevice } from '../../services/user.service';
 export class UserHeaderComponent {
   user: any
   constructor(
-    private userService: UserSevice
+    private userService: UserService
   ){}
   ngOnInit():void{
     this.userService.findbyemail(JSON.parse(sessionStorage.getItem("loggedInUser"))).then(

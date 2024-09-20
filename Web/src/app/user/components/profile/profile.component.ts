@@ -19,9 +19,7 @@ export class ProfileComponent implements OnInit {
   constructor(
     private conect : Conect,
     private userService: UserSevice
-  ){
-    // this.conect.reloadPage()
-  }
+  ){}
   ngOnInit(): void {
     console.log(JSON.parse(sessionStorage.getItem("loggedInUser")))
 

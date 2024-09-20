@@ -15,6 +15,10 @@ public partial class Product
 
     public int? CategoryId { get; set; }
 
+    public string? Image { get; set; }
+
+    public double? Price { get; set; }
+
     public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 
     public virtual SubCategory? Category { get; set; }

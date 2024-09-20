@@ -2,6 +2,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Conect } from '../../../conect';
+import { UserSevice } from '../../services/user.service';
+import { User } from '../../entities/user.entity';
+
 
 @Component({
   standalone: true,
@@ -12,16 +15,25 @@ import { Conect } from '../../../conect';
   }
 })
 export class ProfileComponent implements OnInit {
-  user:any
+  user:User
   constructor(
-    private conect : Conect
+    private conect : Conect,
+    private userService: UserSevice
   ){
     // this.conect.reloadPage()
   }
   ngOnInit(): void {
     // console.log(JSON.parse(sessionStorage.getItem("loggedInUser")))
-    this.user = JSON.parse(sessionStorage.getItem("loggedInUser"))
-    console.log(this.user)
+
+    this.userService.findbyemail(JSON.parse(sessionStorage.getItem("loggedInUser")).email).then(
+      res=>{
+          this.user = res['result'] as User
+          console.log(this.user)
+      },
+      error=>{
+        console.log(error)
+      }
+    )
     this.conect.addStyle("src/assets/css/light/components/list-group.css")
     this.conect.addStyle("src/assets/css/light/users/user-profile.css")
     this.conect.addStyle("src/assets/css/dark/components/list-group.css")

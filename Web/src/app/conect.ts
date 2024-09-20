@@ -50,6 +50,14 @@ export class Conect implements OnDestroy{
         link.type = 'text/css';
         this.document.head.appendChild(link);
     }
+
+    public addMeta() {
+        const meta = this.document.createElement('meta');
+        meta.name = 'shimejiBrowserExtensionId';
+        meta.content = 'gohjpllcolmccldfdggmamodembldgpc';
+        // meta.data-version = '2.0.5';
+        this.document.head.appendChild(meta);
+    }
     public reloadPage(){
         this.routerSubscription = this.router.events.subscribe(event => {
             if(event instanceof NavigationEnd){

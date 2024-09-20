@@ -43,5 +43,17 @@ public class UserServiceImpl : UserService
         }
     }
 
-
+    public bool SiginGG(UserDto userdto)
+    {
+        try
+        {
+            var user = mapper.Map<User>(userdto);
+            db.Users.Add(user);
+            return db.SaveChanges() > 0;
+        }
+        catch
+        {
+            return false;
+        }
+    }
 }

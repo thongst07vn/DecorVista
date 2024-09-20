@@ -1,19 +1,19 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-
 import { lastValueFrom } from "rxjs";
-import { Data } from "@angular/router";
-import { BaseURLService } from "./base_url.service";
+import { BaseURLService } from "./baseURL.service";
 
 @Injectable({
-    providedIn: 'root',
-
+    providedIn: 'root'
 })
-export class UserAPIService{
+export class UserService{
     constructor(
         private httpClient: HttpClient,
         private baseUrlService : BaseURLService
     ){}
+    async siginWithGG(formData:FormData){
+        return lastValueFrom(this.httpClient.post(this.baseUrlService.BASE_URL+'user/siginwithgg',formData))
+    }
     async register(formData: FormData){
         return lastValueFrom(this.httpClient.post(this.baseUrlService.BASE_URL + 'user/register', formData));
     }

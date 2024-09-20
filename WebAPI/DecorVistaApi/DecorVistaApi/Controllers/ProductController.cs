@@ -5,14 +5,14 @@ namespace DecorVistaApi.Controllers;
 [Route("api/product")]
 public class ProductController : Controller
 {
-    private ProductService productService;
-    public ProductController(ProductService _productService)
+    private ProductsService productService;
+    public ProductController(ProductsService _productService)
     {
         productService = _productService;
     }
     [Produces("application/json")]
     [HttpGet("findall")]
-    public IActionResult Findall()
+    public IActionResult FindAll()
     {
         try
         {

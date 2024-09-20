@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Conect } from '../../conect';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { UserAPIService } from '../services/user.service';
+import { UserService } from '../services/user.service';
 import { formatDate } from '@angular/common';
 import { DesignerService } from '../services/designer.service';
 
@@ -21,7 +21,7 @@ export class SignUpComponent implements OnInit {
 
   constructor(
     private conect: Conect,
-    private userService: UserAPIService,
+    private userService: UserService,
     private formBuilder: FormBuilder,
     private designerService : DesignerService
   ){}
@@ -87,6 +87,7 @@ export class SignUpComponent implements OnInit {
                 res => {
                   if(res['result']){
                     console.log('this account is already exists');
+                    window.location.href = '/'
                   } else {
                     let user = this.registerForm.value;
               console.log(user);

@@ -8,6 +8,7 @@ import { LoginComponent } from './user/login/login.component';
 import { SignUpComponent } from './user/login/signup.component';
 import { ContactUsComponent } from './user/components/contactUs.component';
 import { AddtoCardComponent } from './user/components/product/addtocard.component';
+import { ChatBoxComponent } from './user/components/profile/chatBox.component';
 
 
 export const routes: Routes = [
@@ -38,6 +39,10 @@ export const routes: Routes = [
             {
                 path:'add-to-cart',
                 component:AddtoCardComponent
+            },
+            {
+                path:'chat',
+                component:ChatBoxComponent
             }
         ]
     },

@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 
 import { lastValueFrom } from "rxjs";
 import { Data } from "@angular/router";
-import { BaseURLService } from "./base_url.service";
+import { BaseURLService } from "./baseURL.service";
 
 @Injectable({
     providedIn: 'root',

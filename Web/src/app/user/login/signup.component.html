@@ -30,6 +30,7 @@
                     <div class="card">
                         <div class="card-body">
     
+                            <form [formGroup]="registerForm" (ngSubmit)="Register()">
                             <div class="row">
                                 <div class="col-12">
                                     <div  class="mb-4" style="text-align: center;">
@@ -41,20 +42,89 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="mb-3">
-                                        <label class="form-label">Name</label>
-                                        <input type="text" class="form-control add-billing-address-input">
+                                        <label class="form-label">You want to be an</label>
+                                        <select class="form-select" formControlName="role">
+                                            <option value="1" selected>User</option>
+                                            <option value="2">Designer</option>
+                                        </select>                                    
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Username</label>
+                                        <input type="text" class="form-control add-billing-address-input" formControlName="username">
+                                        @if(registerForm.get('username').touched){
+                                            <ul>
+                                                @if(registerForm.hasError('required',['username'])){
+                                                    <li style="padding-top: 5px; color: red;">username is blank</li>
+                                                }
+                                            </ul>
+                                        }
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label class="form-label">Email</label>
-                                        <input type="email" class="form-control">
+                                        <input type="email" class="form-control" formControlName="email" formControlName="email">
+                                        @if(registerForm.get('email').touched){
+                                            <ul>
+                                                @if(registerForm.hasError('required',['email'])){
+                                                    <li style="padding-top: 5px; color: red;">email is blank</li>
+                                                } 
+                                                @else if(registerForm.hasError('email',['email']))
+                                                {
+                                                    <li style="padding-top: 5px; color: red;">email invalid</li>
+                                                }
+                                            </ul>
+                                        }
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label class="form-label">Password</label>
-                                        <input type="text" class="form-control">
+                                        <input type="password" class="form-control" formControlName="password">
+                                        @if(registerForm.get('password').touched){
+                                            <ul>
+                                                @if(registerForm.hasError('required',['password'])){
+                                                    <li style="padding-top: 5px; color: red;">password is blank</li>
+                                                }
+                                                @else if(registerForm.hasError('pattern',['password'])){
+                                                    <li style="padding-top: 5px; color: red;">password does not meet the require</li>
+                                                }
+                                            </ul>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Confirm password</label>
+                                        <input type="password" class="form-control" formControlName="rePassword">
+                                        @if(registerForm.get('rePassword').touched){
+                                            <ul>
+                                                @if(registerForm.hasError('required',['rePassword'])){
+                                                    <li style="padding-top: 5px; color: red;">Confirm password is blank</li>
+                                                }
+                                                @else if(registerForm?.errors?.['mismatch']){
+                                                    <li style="padding-top: 5px; color: red;">Wrong confirm password</li>
+                                                }
+                                            </ul>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Contact number</label>
+                                        <input type="email" class="form-control" formControlName="contactnumber">
+                                        @if(registerForm.get('contactnumber').touched){
+                                            <ul>
+                                                @if(registerForm.hasError('required',['contactnumber'])){
+                                                    <li style="padding-top: 5px; color: red;">Contact number is blank</li>
+                                                }
+                                                @else if(registerForm.hasError('pattern',['contactnumber'])){
+                                                    <li style="padding-top: 5px; color: red;">Contact number does not meet the require</li>
+                                                }
+                                            </ul>
+                                        }
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -70,17 +140,17 @@
                                 
                                 <div class="col-12">
                                     <div class="mb-4">
-                                        <button class="btn btn-secondary w-100" >SIGN UP</button>
+                                        <button class="btn btn-secondary w-100" [disabled]="registerForm.invalid" >SIGN UP</button>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="text-center">
-                                        <p class="mb-0">You have an account ? <a [routerLink]="['/login']" class="text-warning">Sign In</a></p>
+                                        <p class="mb-0">You have an account ?<a [routerLink]="['/login']" class="text-warning">Sign In</a></p> 
                                     </div>
-                                </div>
-                                
-                            
-                        </div>
+                                </div>                                                        
+                            </div>
+                        </form>
+
                     </div>
                 </div>
                 

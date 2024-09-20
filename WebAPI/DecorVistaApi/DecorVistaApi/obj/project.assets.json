@@ -4350,19 +4350,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {}
+    "C:\\Users\\trana\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\DecorVistaApi.csproj",
+      "projectUniqueName": "C:\\Users\\trana\\OneDrive\\Máy tính\\techwiz 2024\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\DecorVistaApi.csproj",
       "projectName": "DecorVistaApi",
-      "projectPath": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\DecorVistaApi.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\obj\\",
+      "projectPath": "C:\\Users\\trana\\OneDrive\\Máy tính\\techwiz 2024\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\DecorVistaApi.csproj",
+      "packagesPath": "C:\\Users\\trana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\trana\\OneDrive\\Máy tính\\techwiz 2024\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\trana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4450,7 +4450,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

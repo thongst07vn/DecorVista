@@ -13,7 +13,7 @@ import { Conect } from '../../../conect';
 })
 export class ProductDetailsComponent implements OnInit {
   constructor(
-    private conect : Conect,
+    private conect : Conect
   ){
     
   }
@@ -47,7 +47,6 @@ export class ProductDetailsComponent implements OnInit {
     this.conect.addScriptAsync("src/plugins/src/splide/splide.min.js")
     this.conect.addScriptAsync("src/assets/js/apps/ecommerce-details.js")
     // this.conect.reloadPage()
-    
   }
   addToCart(){
     window.location.href = '/user/add-to-cart'

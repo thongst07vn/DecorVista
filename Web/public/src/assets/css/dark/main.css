@@ -550,7 +550,7 @@ body.dark .form-control:focus {
   background-color: #1B4B3D;
 }
 body.dark .form-control::placeholder {
-  color: white !important;
+  color: #888ea8 !important;
   font-size: 15px;
 }
 body.dark .form-control::-webkit-input-placeholder, body.dark .form-control::-ms-input-placeholder, body.dark .form-control::-moz-placeholder {

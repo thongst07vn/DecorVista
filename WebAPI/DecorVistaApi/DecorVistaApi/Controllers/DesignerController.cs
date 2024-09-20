@@ -5,15 +5,14 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace DecorVistaApi.Controllers;
-[Route("api/user")]
-public class UserController : Controller
+[Route("api/designer")]
+public class DesignerController : Controller
 {
-    private UserService userService;
-    public UserController(UserService _userService)
+    private DesignerService designerService;
+    public DesignerController(DesignerService _designerService)
     {
-        userService = _userService;
+        designerService = _designerService;
     }
-
     [Consumes("multipart/form-data")]
     [Produces("application/json")]
     [HttpPost("register")]
@@ -22,14 +21,14 @@ public class UserController : Controller
         var setting = new JsonSerializerSettings();
         setting.Converters.Add(new IsoDateTimeConverter() { DateTimeFormat = "dd/MM/yyyy" });
 
-        var userDto = JsonConvert.DeserializeObject<UserDto>(userinfo);
-        userDto.Password = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
+        var designerDto = JsonConvert.DeserializeObject<DesignerDto>(userinfo);
+        designerDto.Password = BCrypt.Net.BCrypt.HashPassword(designerDto.Password);
         try
         {
 
             return Ok(new
             {
-                result = userService.Register(userDto)
+                result = designerService.Register(designerDto)
             });
         }
         catch
@@ -47,7 +46,7 @@ public class UserController : Controller
 
             return Ok(new
             {
-                result = userService.FindAll()
+                result = designerService.FindAll()
             });
         }
         catch
@@ -65,7 +64,7 @@ public class UserController : Controller
 
             return Ok(new
             {
-                result = userService.FindById(id)
+                result = designerService.FindById(id)
             });
         }
         catch
@@ -80,10 +79,9 @@ public class UserController : Controller
     {
         try
         {
-
             return Ok(new
             {
-                result = userService.FindByEmail(email)
+                result = designerService.FindByEmail(email)
             });
         }
         catch
@@ -95,15 +93,13 @@ public class UserController : Controller
     [Produces("application/json")]
     [Consumes("application/json")]
     [HttpPost("login")]
-    public IActionResult Login([FromBody] UserDto userDto)
+    public IActionResult Login([FromBody] DesignerDto designerDto)
     {
         try
         {
-
-
             return Ok(new
             {
-                result = userService.Login(userDto)
+                result = designerService.Login(designerDto)
             });
         }
         catch

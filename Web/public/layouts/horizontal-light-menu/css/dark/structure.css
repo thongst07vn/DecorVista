@@ -92,13 +92,10 @@ body.dark .page-title h3 {
   font-weight: 600;
   letter-spacing: 0;
 }
-body.dark span{
-  color: white;
-}
 body.dark .page-title span {
   display: block;
   font-size: 11px;
-  color: white;
+  color: #555555;
   font-weight: normal;
 }
 body.dark .main-container {

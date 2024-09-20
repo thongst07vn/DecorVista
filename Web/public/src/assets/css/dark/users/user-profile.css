@@ -82,7 +82,7 @@ body.dark .user-profile .widget-content-area .user-info p {
   font-size: 20px;
   font-weight: 600;
   margin-top: 22px;
-  color: white;
+  color: #009688;
 }
 body.dark .user-profile .widget-content-area .user-info-list > div {
   display: flex;

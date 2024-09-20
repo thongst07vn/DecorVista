@@ -4,8 +4,6 @@ import { UserHeaderComponent } from '../header/user-header.component';
 import { UserFooterComponent } from '../footer/user-footer.component';
 import { SidbarComponent } from '../sidebar/sidbar.component';
 import { Conect } from '../../../conect';
-import { ProductSevice } from '../../services/product.service';
-import { Product } from '../../entities/product.entity';
 
 
 @Component({
@@ -23,7 +21,6 @@ export class LayoutsComponent {
   ){}
 
   ngOnInit(): void {
-    
 
     this.conect.addStyle("layouts/horizontal-light-menu/css/light/loader.css")
     this.conect.addStyle("layouts/horizontal-light-menu/css/dark/loader.css")
@@ -31,14 +28,15 @@ export class LayoutsComponent {
     this.conect.addStyle("src/bootstrap/css/bootstrap.min.css")
     this.conect.addStyle("layouts/horizontal-light-menu/css/light/plugins.css")
     this.conect.addStyle("layouts/horizontal-light-menu/css/dark/plugins.css")
-    this.conect.addStyle("src/assets/css/light/elements/custom-pagination.css")
-    this.conect.addStyle("src/assets/css/dark/elements/custom-pagination.css")
+
+    
     // this.conect.addScript("https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
     // this.conect.addScriptDefer("src/bootstrap/js/bootstrap.bundle.min.js")
     // this.conect.addScriptDefer("src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js")
     // this.conect.addScriptDefer("src/plugins/src/mousetrap/mousetrap.min.js")
     // this.conect.addScriptDefer("src/plugins/src/waves/waves.min.js")
     this.conect.addScriptDefer("layouts/horizontal-light-menu/app.js")
-    this.conect.reloadPage()
+    // this.conect.reloadPage()
+    
   }
 }

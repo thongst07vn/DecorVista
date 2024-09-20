@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DecorVistaApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5787df734a05322b9a8d919043070c002b259f3e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fefc5e4bee8fead86848e972b64f2ea6482d2dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("DecorVistaApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DecorVistaApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

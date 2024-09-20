@@ -70,6 +70,7 @@ public class UserController : Controller
             return BadRequest();
         }
     }
+
     [Produces("application/json")]
     [HttpGet("findbyid/{id}")]
     public IActionResult FindById(int id)

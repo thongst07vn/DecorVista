@@ -23,9 +23,9 @@ export class ProfileComponent implements OnInit {
     // this.conect.reloadPage()
   }
   ngOnInit(): void {
-    // console.log(JSON.parse(sessionStorage.getItem("loggedInUser")))
+    console.log(JSON.parse(sessionStorage.getItem("loggedInUser")))
 
-    this.userService.findbyemail(JSON.parse(sessionStorage.getItem("loggedInUser")).email).then(
+    this.userService.findbyemail(JSON.parse(sessionStorage.getItem("loggedInUser"))).then(
       res=>{
           this.user = res['result'] as User
           console.log(this.user)

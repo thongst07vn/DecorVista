@@ -147,25 +147,34 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem("loggedInUser",JSON.stringify(account.email))
           window.location.href = 'user/home'
         }else{
-          let s = JSON.stringify(account);
-          let formData = new FormData();
-
-          formData.append('avt', payLoad.picture);
-          formData.append('usergg',s);
-          this.userService.siginWithGG(formData).then(
-              res =>{
-                  if(res['result']){
-                    // console.log(account)
-                    sessionStorage.setItem("loggedInUser",JSON.stringify(account.email))
-                    window.location.href = 'user/home' 
-                  } else {
-                      console.log('failed');
-                  }
-              },
-              error => {
-                  console.log(error);
+          this.designerService.findbyemail(account.email).then(
+            res=>{
+              if(res['result']){
+                sessionStorage.setItem("loggedInUser",JSON.stringify(account.email))
+                window.location.href = 'user/home'
+              }else{
+                let s = JSON.stringify(account);
+                let formData = new FormData();
+                formData.append('avt', payLoad.picture);
+                formData.append('usergg',s);
+                this.userService.siginWithGG(formData).then(
+                    res =>{
+                        if(res['result']){
+                          // console.log(account)
+                          sessionStorage.setItem("loggedInUser",JSON.stringify(account.email))
+                          window.location.href = 'user/home' 
+                        } else {
+                            console.log('failed');
+                        }
+                    },
+                    error => {
+                        console.log(error);
+                    }
+                )
               }
+            }
           )
+          
         }
       }
     )

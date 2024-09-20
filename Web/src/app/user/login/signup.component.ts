@@ -87,6 +87,7 @@ export class SignUpComponent implements OnInit {
                 res => {
                   if(res['result']){
                     console.log('this account is already exists');
+                    window.location.href = '/'
                   } else {
                     let user = this.registerForm.value;
               console.log(user);

@@ -55,4 +55,61 @@ public class UserController : Controller
             return BadRequest();
         }
     }
+
+    [Produces("application/json")]
+    [HttpGet("findbyid/{id}")]
+    public IActionResult FindById(int id)
+    {
+        try
+        {
+
+            return Ok(new
+            {
+                result = userService.FindById(id)
+            });
+        }
+        catch
+        {
+            return BadRequest();
+        }
+    }
+
+    [Produces("application/json")]
+    [HttpGet("findbyemail/{email}")]
+    public IActionResult FindByEmail(string email)
+    {
+        try
+        {
+
+            return Ok(new
+            {
+                result = userService.FindByEmail(email)
+            });
+        }
+        catch
+        {
+            return BadRequest();
+        }
+    }
+
+    [Produces("application/json")]
+    [Consumes("application/json")]
+    [HttpPost("login")]
+    public IActionResult Login([FromBody] UserDto userDto)
+    {
+        try
+        {
+
+
+            return Ok(new
+            {
+                result = userService.Login(userDto)
+            });
+        }
+        catch
+        {
+            return BadRequest();
+        }
+    }
+
 }

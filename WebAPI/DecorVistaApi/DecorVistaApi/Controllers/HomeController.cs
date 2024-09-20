@@ -1,8 +1,8 @@
-﻿//using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
-//namespace KonectiveApi.Controllers;
-//[Route("api/home")]
-//public class HomeController : Controller
-//{
+namespace DecorVistaApi.Controllers;
+[Route("api/home")]
+public class HomeController : Controller
+{
 
-//}
+}

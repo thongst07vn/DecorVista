@@ -9,11 +9,44 @@ namespace DecorVistaApi.Controllers;
 public class UserController : Controller
 {
     private UserService userService;
-    public UserController(UserService _userService)
+    private IWebHostEnvironment webHostEnvironment;
+    public UserController(UserService _userService, IWebHostEnvironment _webHostEnvironment)
     {
         userService = _userService;
-    }
+        webHostEnvironment = _webHostEnvironment;
 
+    }
+    [Consumes("multipart/form-data")]
+    [Produces("application/json")]
+    [HttpPost("siginwithgg")]
+    public IActionResult SiginWithGG(string usergg)
+    {
+        //var newFilename = "noimg.jpg";
+        //if (avt != null && avt.Length > 0)
+        //{
+        //    newFilename = FileHelper.generateFileName(avt.FileName);
+        //    var path = Path.Combine(webHostEnvironment.WebRootPath, "images", newFilename);
+        //    using (var fileStream = new FileStream(path, FileMode.Create))
+        //    {
+        //        avt.CopyTo(fileStream);
+        //    }
+        //}
+        //convert JSon to productDTO
+        var userDTO = JsonConvert.DeserializeObject<UserDto>(usergg);
+        //userDTO.Avatar = newFilename;
+        try
+        {
+
+            return Ok(new
+            {
+                result = userService.SiginGG(userDTO)
+            });
+        }
+        catch
+        {
+            return BadRequest();
+        }
+    }
     [Consumes("multipart/form-data")]
     [Produces("application/json")]
     [HttpPost("register")]
@@ -48,6 +81,23 @@ public class UserController : Controller
             return Ok(new
             {
                 result = userService.FindAll()
+            });
+        }
+        catch
+        {
+            return BadRequest();
+        }
+    }
+    [Produces("application/json")]
+    [HttpGet("findbyemail/{email}")]
+    public IActionResult FindByEmail(string email)
+    {
+        try
+        {
+
+            return Ok(new
+            {
+                result = userService.FindByEmail(email)
             });
         }
         catch

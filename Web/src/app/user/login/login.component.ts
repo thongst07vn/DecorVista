@@ -104,11 +104,6 @@ export class LoginComponent implements OnInit {
   decodeToken(token:string){
     const base64URL = token.split(".")[1]
     const base64 = base64URL.replace(/-/g,'+').replace(/_/g,'/')
-    // console.log(JSON.parse(atob(token.split(".")[1])))
-    // decodeURIComponent(JSON.parse(atob(base64).split('').map(function(c){
-    //   return c.charCodeAt(0).toString(16).slice(-2)
-    // }).join('')))
-
     return JSON.parse(JSBase64.decode(base64))
   }
   handleLogin(resp:any){

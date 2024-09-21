@@ -108,6 +108,7 @@ export class HomeComponent implements OnInit {
             res => {
               if(res['result']){
                 console.log('add success');
+                window.location.href = 'user/home'
               }
               else{
                 console.log('add failed')

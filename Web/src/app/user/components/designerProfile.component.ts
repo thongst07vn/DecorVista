@@ -39,12 +39,21 @@ export class DesignerProfileComponent implements OnInit {
         )
       }
     )
-    
+    this.conect.removeScript("src/plugins/src/highlight/highlight.pack.js")
+    this.conect.removeScript("src/plugins/src/flatpickr/flatpickr.js")
+    this.conect.removeScript("src/plugins/src/flatpickr/custom-flatpickr.js")
+
     this.conect.addStyle("src/assets/css/light/components/list-group.css")
     this.conect.addStyle("src/assets/css/light/users/user-profile.css")
     this.conect.addStyle("src/assets/css/dark/components/list-group.css")
     this.conect.addStyle("src/assets/css/dark/users/user-profile.css")
+    this.conect.addStyle("src/plugins/css/light/flatpickr/custom-flatpickr.css")
+    this.conect.addStyle("src/plugins/css/dark/flatpickr/custom-flatpickr.css")
 
+    this.conect.addScript("src/plugins/src/highlight/highlight.pack.js")
+
+    this.conect.addScript("src/plugins/src/flatpickr/flatpickr.js")
+    this.conect.addScript("src/plugins/src/flatpickr/custom-flatpickr.js")
     // this.conect.reloadPage()
 
   }

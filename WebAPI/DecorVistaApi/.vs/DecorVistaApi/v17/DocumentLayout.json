@@ -3,40 +3,32 @@
   "WorkspaceRootPath": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\designerserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\designerserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\models\\consultation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\models\\consultation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\dtos\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\dtos\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\userserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\userserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\productsserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\productsserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\controllers\\consultationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\controllers\\consultationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\cartserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\cartserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\controllers\\designercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\controllers\\designercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,40 +39,84 @@
       "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\controllers\\designercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\controllers\\designercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\userserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\userserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\cartserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\cartserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\consultationserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\consultationserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\designerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\designerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\designerserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\designerserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\productsserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\productsserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Models\\DatabaseContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DecorVistaApi\\Models\\DatabaseContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\consultationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\consultationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\dtos\\consultationddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\dtos\\consultationddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\dtos\\designerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\dtos\\designerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\helpers\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\helpers\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -95,23 +131,11 @@
       "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\dtos\\productattrdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\dtos\\designerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\dtos\\designerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\AppData\\Local\\SourceServer\\000595022b67ddbf7081539d1b5c7e77162c8983ed490988b93b7b6f74dc2a39\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\UserController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\helpers\\mailhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\helpers\\mailhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\helpers\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\helpers\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|d:\\techwich5\\decorvista\\decorvista\\webapi\\decorvistaapi\\decorvistaapi\\models\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E66E18-4E1A-4D74-9492-908FDC830ABC}|DecorVistaApi\\DecorVistaApi.csproj|solutionrelative:decorvistaapi\\models\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -121,59 +145,141 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 29,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 1,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Models\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "DecorVistaApi\\Models\\OrderDetail.cs",
+              "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Models\\OrderDetail.cs",
+              "RelativeToolTip": "DecorVistaApi\\Models\\OrderDetail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T19:34:44.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Consultation.cs",
+              "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Models\\Consultation.cs",
+              "RelativeDocumentMoniker": "DecorVistaApi\\Models\\Consultation.cs",
+              "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Models\\Consultation.cs",
+              "RelativeToolTip": "DecorVistaApi\\Models\\Consultation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T19:34:36.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "DatabaseContext.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Models\\DatabaseContext.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Models\\DatabaseContext.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Models\\DatabaseContext.cs",
               "RelativeToolTip": "DecorVistaApi\\Models\\DatabaseContext.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAswCYAAAAAAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAwCYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T08:11:48.064Z"
+              "WhenOpened": "2024-09-21T19:32:54.194Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
+              "Title": "ConsultationServiceImpl.cs",
+              "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\ConsultationServiceImpl.cs",
+              "RelativeDocumentMoniker": "DecorVistaApi\\Services\\ConsultationServiceImpl.cs",
+              "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\ConsultationServiceImpl.cs",
+              "RelativeToolTip": "DecorVistaApi\\Services\\ConsultationServiceImpl.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAYwDAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T15:33:28.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ConsultationService.cs",
+              "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\ConsultationService.cs",
+              "RelativeDocumentMoniker": "DecorVistaApi\\Services\\ConsultationService.cs",
+              "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\ConsultationService.cs",
+              "RelativeToolTip": "DecorVistaApi\\Services\\ConsultationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T15:30:37.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConsultationController.cs",
+              "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\ConsultationController.cs",
+              "RelativeDocumentMoniker": "DecorVistaApi\\Controllers\\ConsultationController.cs",
+              "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\ConsultationController.cs",
+              "RelativeToolTip": "DecorVistaApi\\Controllers\\ConsultationController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwDoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T15:30:23.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ConsultationdDto.cs",
+              "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Dtos\\ConsultationdDto.cs",
+              "RelativeDocumentMoniker": "DecorVistaApi\\Dtos\\ConsultationdDto.cs",
+              "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Dtos\\ConsultationdDto.cs",
+              "RelativeToolTip": "DecorVistaApi\\Dtos\\ConsultationdDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T15:25:10.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CartController.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Controllers\\CartController.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\CartController.cs",
               "RelativeToolTip": "DecorVistaApi\\Controllers\\CartController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAYwHcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T07:51:23.419Z"
+              "WhenOpened": "2024-09-21T07:51:23.419Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "CartServiceImpl.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\CartServiceImpl.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Services\\CartServiceImpl.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\CartServiceImpl.cs",
               "RelativeToolTip": "DecorVistaApi\\Services\\CartServiceImpl.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAUwCAAAAABAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAYwDgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T07:49:23.971Z"
+              "WhenOpened": "2024-09-21T07:49:23.971Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "CartService.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\CartService.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Services\\CartService.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\CartService.cs",
               "RelativeToolTip": "DecorVistaApi\\Services\\CartService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T07:48:57.792Z"
+              "WhenOpened": "2024-09-21T07:48:57.792Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 28,
               "Title": "CartItemDto.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Dtos\\CartItemDto.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Dtos\\CartItemDto.cs",
@@ -185,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "CartDto.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Dtos\\CartDto.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Dtos\\CartDto.cs",
@@ -197,20 +303,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 14,
               "Title": "DesignerServiceImpl.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\DesignerServiceImpl.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Services\\DesignerServiceImpl.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\DesignerServiceImpl.cs",
               "RelativeToolTip": "DecorVistaApi\\Services\\DesignerServiceImpl.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAABAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAwDYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T08:51:59.277Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "DesignerService.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\DesignerService.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Services\\DesignerService.cs",
@@ -218,23 +324,25 @@
               "RelativeToolTip": "DecorVistaApi\\Services\\DesignerService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T08:51:27.198Z"
+              "WhenOpened": "2024-09-20T08:51:27.198Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "DesignerController.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\DesignerController.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Controllers\\DesignerController.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\DesignerController.cs",
               "RelativeToolTip": "DecorVistaApi\\Controllers\\DesignerController.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAUwG4AAAABAAAA",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAYwG4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T08:50:39.347Z"
+              "WhenOpened": "2024-09-20T08:50:39.347Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 32,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\AppData\\Local\\SourceServer\\000595022b67ddbf7081539d1b5c7e77162c8983ed490988b93b7b6f74dc2a39\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\PC\\AppData\\Local\\SourceServer\\000595022b67ddbf7081539d1b5c7e77162c8983ed490988b93b7b6f74dc2a39\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\UserController.cs [Read Only]",
@@ -245,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 33,
               "Title": "MailHelper.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Helpers\\MailHelper.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Helpers\\MailHelper.cs",
@@ -269,19 +377,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "ProductController.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Controllers\\ProductController.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\ProductController.cs",
               "RelativeToolTip": "DecorVistaApi\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAUwBsAAAAeAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAYwCwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T13:13:14.165Z"
+              "WhenOpened": "2024-09-19T13:13:14.165Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "ProductsServiceImpl.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\ProductsServiceImpl.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Services\\ProductsServiceImpl.cs",
@@ -289,11 +398,12 @@
               "RelativeToolTip": "DecorVistaApi\\Services\\ProductsServiceImpl.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T12:58:29.864Z"
+              "WhenOpened": "2024-09-19T12:58:29.864Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "ProductsService.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\ProductsService.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Services\\ProductsService.cs",
@@ -301,47 +411,51 @@
               "RelativeToolTip": "DecorVistaApi\\Services\\ProductsService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T12:58:04.669Z"
+              "WhenOpened": "2024-09-19T12:58:04.669Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Services\\UserService.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\UserService.cs",
               "RelativeToolTip": "DecorVistaApi\\Services\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T09:59:37.072Z"
+              "WhenOpened": "2024-09-19T09:59:37.072Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Controllers\\UserController.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\UserController.cs",
               "RelativeToolTip": "DecorVistaApi\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAAAUwJAAAAAAAAAA",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAYwJAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T09:59:24.072Z"
+              "WhenOpened": "2024-09-19T09:59:24.072Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Controllers\\HomeController.cs",
               "RelativeToolTip": "DecorVistaApi\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAUwB4AAAAAAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAYwB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T09:59:21.97Z"
+              "WhenOpened": "2024-09-19T09:59:21.97Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "UserDto.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Dtos\\UserDto.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Dtos\\UserDto.cs",
@@ -353,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 30,
               "Title": "SubCategoryDto.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Dtos\\SubCategoryDto.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Dtos\\SubCategoryDto.cs",
@@ -365,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 29,
               "Title": "ProductDto.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Dtos\\ProductDto.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Dtos\\ProductDto.cs",
@@ -377,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 31,
               "Title": "ProductAttrDto.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Dtos\\ProductAttrDto.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Dtos\\ProductAttrDto.cs",
@@ -389,39 +503,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Dtos\\MappingProfile.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Dtos\\MappingProfile.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Dtos\\MappingProfile.cs",
               "RelativeToolTip": "DecorVistaApi\\Dtos\\MappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAMwBMAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T09:58:46.903Z"
+              "WhenOpened": "2024-09-19T09:58:46.903Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Program.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Program.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Program.cs",
               "RelativeToolTip": "DecorVistaApi\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T09:56:23.734Z"
+              "WhenOpened": "2024-09-19T09:56:23.734Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "UserServiceImpl.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\UserServiceImpl.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Services\\UserServiceImpl.cs",
               "ToolTip": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Services\\UserServiceImpl.cs",
               "RelativeToolTip": "DecorVistaApi\\Services\\UserServiceImpl.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAUwFIAAAAAAAAA",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAzwFkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T09:57:55.637Z"
+              "WhenOpened": "2024-09-19T09:57:55.637Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -437,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 27,
               "Title": "CategoryDto.cs",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\Dtos\\CategoryDto.cs",
               "RelativeDocumentMoniker": "DecorVistaApi\\Dtos\\CategoryDto.cs",
@@ -449,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\techwich5\\DecorVista\\DecorVista\\WebAPI\\DecorVistaApi\\DecorVistaApi\\appsettings.json",
               "RelativeDocumentMoniker": "DecorVistaApi\\appsettings.json",
@@ -457,7 +574,8 @@
               "RelativeToolTip": "DecorVistaApi\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-19T09:56:58.57Z"
+              "WhenOpened": "2024-09-19T09:56:58.57Z",
+              "EditorCaption": ""
             }
           ]
         }

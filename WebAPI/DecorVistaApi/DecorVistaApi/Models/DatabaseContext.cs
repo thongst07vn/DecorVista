@@ -37,12 +37,11 @@ public partial class DatabaseContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Address>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__addresse__3213E83F35078954");
+            entity.HasKey(e => e.Id).HasName("PK__addresse__3213E83FFA591525");
 
             entity.ToTable("addresses");
 
@@ -75,12 +74,12 @@ public partial class DatabaseContext : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.Addresses)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__addresses__user___4C6B5938");
+                .HasConstraintName("FK__addresses__user___1D7B6025");
         });
 
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__cart__3213E83F38F47AED");
+            entity.HasKey(e => e.Id).HasName("PK__cart__3213E83FCE8D778C");
 
             entity.ToTable("cart");
 
@@ -92,12 +91,12 @@ public partial class DatabaseContext : DbContext
             entity.HasOne(d => d.IdNavigation).WithOne(p => p.Cart)
                 .HasForeignKey<Cart>(d => d.Id)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__cart__id__5BAD9CC8");
+                .HasConstraintName("FK__cart__id__2CBDA3B5");
         });
 
         modelBuilder.Entity<CartItem>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__cart_ite__3213E83F5A076D54");
+            entity.HasKey(e => e.Id).HasName("PK__cart_ite__3213E83F29E868CA");
 
             entity.ToTable("cart_item");
 
@@ -108,16 +107,16 @@ public partial class DatabaseContext : DbContext
 
             entity.HasOne(d => d.Cart).WithMany(p => p.CartItems)
                 .HasForeignKey(d => d.CartId)
-                .HasConstraintName("FK__cart_item__cart___5E8A0973");
+                .HasConstraintName("FK__cart_item__cart___2F9A1060");
 
             entity.HasOne(d => d.Product).WithMany(p => p.CartItems)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__cart_item__produ__5F7E2DAC");
+                .HasConstraintName("FK__cart_item__produ__308E3499");
         });
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__categori__3213E83F14A42021");
+            entity.HasKey(e => e.Id).HasName("PK__categori__3213E83FC480AE3B");
 
             entity.ToTable("categories");
 
@@ -149,16 +148,16 @@ public partial class DatabaseContext : DbContext
 
             entity.HasOne(d => d.Designer).WithMany()
                 .HasForeignKey(d => d.DesignerId)
-                .HasConstraintName("FK__chat_box__design__690797E6");
+                .HasConstraintName("FK__chat_box__design__3A179ED3");
 
             entity.HasOne(d => d.User).WithMany()
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__chat_box__user_i__681373AD");
+                .HasConstraintName("FK__chat_box__user_i__39237A9A");
         });
 
         modelBuilder.Entity<Consultation>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__consulta__3213E83F523BC077");
+            entity.HasKey(e => e.Id).HasName("PK__consulta__3213E83FABA0CD9D");
 
             entity.ToTable("consultations");
 
@@ -175,20 +174,20 @@ public partial class DatabaseContext : DbContext
 
             entity.HasOne(d => d.Designer).WithMany(p => p.Consultations)
                 .HasForeignKey(d => d.DesignerId)
-                .HasConstraintName("FK__consultat__desig__55009F39");
+                .HasConstraintName("FK__consultat__desig__2610A626");
 
             entity.HasOne(d => d.User).WithMany(p => p.Consultations)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__consultat__user___540C7B00");
+                .HasConstraintName("FK__consultat__user___251C81ED");
         });
 
         modelBuilder.Entity<Designer>(entity =>
         {
-            entity.HasKey(e => e.DesignerId).HasName("PK__designer__DDA82ABDCC05E888");
+            entity.HasKey(e => e.DesignerId).HasName("PK__designer__DDA82ABD054AE202");
 
             entity.ToTable("designers");
 
-            entity.HasIndex(e => e.Email, "UQ__designer__AB6E61641C8367D9").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__designer__AB6E616463A5A872").IsUnique();
 
             entity.Property(e => e.DesignerId).HasColumnName("designer_id");
             entity.Property(e => e.Avatar)
@@ -215,7 +214,7 @@ public partial class DatabaseContext : DbContext
 
         modelBuilder.Entity<Follow>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__follow__3213E83F46D9CBB3");
+            entity.HasKey(e => e.Id).HasName("PK__follow__3213E83FBBD93984");
 
             entity.ToTable("follow");
 
@@ -225,16 +224,16 @@ public partial class DatabaseContext : DbContext
 
             entity.HasOne(d => d.Designer).WithMany(p => p.FollowDesigners)
                 .HasForeignKey(d => d.DesignerId)
-                .HasConstraintName("FK__follow__designer__58D1301D");
+                .HasConstraintName("FK__follow__designer__29E1370A");
 
             entity.HasOne(d => d.User).WithMany(p => p.FollowUsers)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__follow__user_id__57DD0BE4");
+                .HasConstraintName("FK__follow__user_id__28ED12D1");
         });
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__order_de__3213E83F5B525B03");
+            entity.HasKey(e => e.Id).HasName("PK__order_de__3213E83F0B002780");
 
             entity.ToTable("order_details");
 
@@ -247,12 +246,12 @@ public partial class DatabaseContext : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.OrderDetails)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__order_det__user___625A9A57");
+                .HasConstraintName("FK__order_det__user___336AA144");
         });
 
         modelBuilder.Entity<OrderItem>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__order_it__3213E83FC48FFC86");
+            entity.HasKey(e => e.Id).HasName("PK__order_it__3213E83FCD7A1D6E");
 
             entity.ToTable("order_item");
 
@@ -263,16 +262,16 @@ public partial class DatabaseContext : DbContext
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrderItems)
                 .HasForeignKey(d => d.OrderId)
-                .HasConstraintName("FK__order_ite__order__65370702");
+                .HasConstraintName("FK__order_ite__order__373B3228");
 
             entity.HasOne(d => d.Product).WithMany(p => p.OrderItems)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__order_ite__produ__662B2B3B");
+                .HasConstraintName("FK__order_ite__produ__36470DEF");
         });
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__products__3213E83FAA9218EB");
+            entity.HasKey(e => e.Id).HasName("PK__products__3213E83F79682ADD");
 
             entity.ToTable("products");
 
@@ -297,16 +296,16 @@ public partial class DatabaseContext : DbContext
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)
-                .HasConstraintName("FK__products__catego__51300E55");
+                .HasConstraintName("FK__products__catego__22401542");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__users__3213E83F2F2FB657");
+            entity.HasKey(e => e.Id).HasName("PK__users__3213E83FEF9EA766");
 
             entity.ToTable("users");
 
-            entity.HasIndex(e => e.Email, "UQ__users__AB6E61646F8C0A9A").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__users__AB6E61646FF19B90").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Avatar)

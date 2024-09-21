@@ -11,6 +11,8 @@ import { AddtoCardComponent } from './user/components/product/addtocard.componen
 import { ChatBoxComponent } from './user/components/profile/chatBox.component';
 import { DesignerContactComponent } from './user/components/designerContact.component';
 import { DesignerProfileComponent } from './user/components/designerProfile.component';
+import { ListScheduleComponent } from './user/components/listSchedule.component';
+import { InvoiceComponent } from './user/components/product/invoice.component';
 
 
 export const routes: Routes = [
@@ -18,6 +20,13 @@ export const routes: Routes = [
         path:'user',
         component:LayoutsComponent,
         children:[
+            {
+                path:'',
+                component:HomeComponent,
+                data:{
+                    addActive: 'home',
+                }
+            },
             {
                 path:'home',
                 component:HomeComponent,
@@ -68,6 +77,14 @@ export const routes: Routes = [
                 data:{
                     addActive: 'designer',
                 }
+            },
+            {
+                path:'schedule-list',
+                component:ListScheduleComponent,
+            },
+            {
+                path:'invoice',
+                component:InvoiceComponent
             }
         ]
     },

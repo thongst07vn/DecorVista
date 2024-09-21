@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DecorVistaApi.Models;
+﻿namespace DecorVistaApi.Models;
 
 public partial class Consultation
 {
     public int Id { get; set; }
 
-    public DateTime? ScheduledTime { get; set; }
+    public DateTime ScheduledTime { get; set; }
 
     public int? Status { get; set; }
 

@@ -94,7 +94,7 @@ export class LoginComponent implements OnInit {
                   res => {
                     if(res['result']){
                       sessionStorage.setItem("loggedInUser",JSON.stringify([this.username]))
-                      window.location.href = 'user/home'
+                      window.location.href = 'user/profile'
                     }
                   }
                 )

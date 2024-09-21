@@ -24,7 +24,18 @@ export class ProfileEditComponent implements OnInit {
     private userService: UserService,
     private designerService : DesignerService,
     private formBuilder : FormBuilder
-  ){}
+  ){
+    this.editProfile = this.formBuilder.group({
+      // id:[designer.id],
+      username : [''],
+      avatar:[''],
+      email: [''],
+      role:[''],
+      contactnumber:[''],
+      yearofexp:[''],
+      specialization:['']
+    })
+  }
   ngOnInit(): void {
     this.conect.removeScript("src/plugins/src/glightbox/glightbox.min.js")
     this.conect.removeScript("src/plugins/src/global/vendors.min.js")
@@ -80,12 +91,14 @@ export class ProfileEditComponent implements OnInit {
         if(res['result'] !=null){
           let user = res['result'] as User
           // console.log(user)
-
+          if(user.contactnumber==null){
+            user.contactnumber = 'Updating.......'
+          }
           this.flag = false
           this.editProfile = this.formBuilder.group({
               // id:[user.id],
               username : [user.username,Validators.required],
-              // avatar:[user.avatar],
+              avatar:[user.avatar],
               email: [user.email, Validators.required],
               role:[user.role],
               contactnumber:[user.contactnumber,Validators.required]
@@ -95,12 +108,18 @@ export class ProfileEditComponent implements OnInit {
             res=>{
               if(res['result'] != null){
                 let designer = res['result'] as Designer
+                if(designer.yearofexp==null){
+                  designer.yearofexp = 'Updating.......'
+                }
+                if(designer.specialization==null){
+                  designer.specialization = 'Updating.......'
+                }
                 // console.log(designer.username)
                 this.flag = true
                 this.editProfile = this.formBuilder.group({
                   // id:[designer.id],
                   username : [designer.username,Validators.required],
-                  // avatar:[designer.avatar],
+                  avatar:[designer.avatar],
                   email: [designer.email, Validators.required],
                   role:[designer.role],
                   contactnumber:[designer.contactnumber,Validators.required],

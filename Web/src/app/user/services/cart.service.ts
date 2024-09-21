@@ -17,4 +17,10 @@ export class CartService{
     async innerCart(userid:number){
         return lastValueFrom(this.httpClient.get(this.baseUrlService.BASE_URL+'cart/innercart/'+userid))
     }
+    async deleteItem(id:number){
+        return lastValueFrom(this.httpClient.delete(this.baseUrlService.BASE_URL+'cart/deleteitem/'+id))
+    }
+    async createOrder(formdata:FormData){
+        return lastValueFrom(this.httpClient.post(this.baseUrlService.BASE_URL+'cart/createorder',formdata))
+    }
 }

@@ -37,9 +37,9 @@ export class SidbarComponent {
     private designerService : DesignerService,
     private conectActive : ConectActive
 
-  ){}
-  ngOnInit(): void {
+  ){
     this.conectActive.data$.subscribe((data) => {
+      console.log(data)
       if (data) {
         // if(data == 'buyer' || data=='seller'){
         //   this.activeClasses.manageUser = 'active'
@@ -51,15 +51,17 @@ export class SidbarComponent {
         //   this.ariaAuction= true
         //   this.showAuction = 'show'
         // }
-        console.log(data)
       }
+      // this.activeClasses = { ...this.activeClasses, [data]: 'active' };
     });
+  }
+  ngOnInit(): void {
+    
     this.userService.findbyemail(JSON.parse(sessionStorage.getItem("loggedInUser"))).then(
       res=>{
           if(res['result']!=null){
             this.user = res['result'] as User
           }
-          console.log(this.user)
       },
       error=>{
         console.log(error)
@@ -70,7 +72,6 @@ export class SidbarComponent {
         if(res['result']!=null){
           this.designer = res['result'] as Designer
         }
-          console.log(this.user)
       },
       error=>{
         console.log(error)

@@ -13,7 +13,7 @@ public partial class OrderItem
 
     public int? Quantity { get; set; }
 
-    public virtual Product? Order { get; set; }
+    public virtual OrderDetail? Order { get; set; }
 
-    public virtual OrderDetail? Product { get; set; }
+    public virtual Product? Product { get; set; }
 }

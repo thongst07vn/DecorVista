@@ -3,14 +3,17 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { Conect } from '../../conect';
 import { UserService } from '../services/user.service';
-import { User } from '../entities/user.entity';
+
 import { DesignerService } from '../services/designer.service';
 import { Designer } from '../entities/designer.entity';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+
+import { ConsultationService } from '../services/consultation.service';
 
 
 @Component({
   standalone: true,
-  imports: [RouterOutlet,RouterLink],
+  imports: [RouterOutlet,RouterLink,FormsModule,ReactiveFormsModule],
   templateUrl: './designerProfile.component.html',
   host:{
     'collision': 'DesignerProfileComponent'
@@ -18,18 +21,25 @@ import { Designer } from '../entities/designer.entity';
 })
 export class DesignerProfileComponent implements OnInit {
   designer:Designer
+  designerId:number
+  userId:any
+  designerForm: FormGroup
   constructor(
     private conect : Conect,
     private userService: UserService,
     private designerService : DesignerService,
-    private activedRoute : ActivatedRoute
+    private activedRoute : ActivatedRoute,
+    private formBuilder: FormBuilder,
+    private consultationService : ConsultationService
 
-  ){}
-  ngOnInit(): void {
+
+  ){
+
+    // this.userId = userResult['result'].id;
     this.activedRoute.paramMap.subscribe(
       params => {
-        console.log(params.get('dsId'))
-        this.designerService.findById(parseInt(params.get('dsId'))).then(
+        this.designerId = parseInt(params.get('dsId'))
+        this.designerService.findById(this.designerId).then(
           res=>{
               this.designer = res['result'] as Designer
           },
@@ -39,22 +49,48 @@ export class DesignerProfileComponent implements OnInit {
         )
       }
     )
-    this.conect.removeScript("src/plugins/src/highlight/highlight.pack.js")
-    this.conect.removeScript("src/plugins/src/flatpickr/flatpickr.js")
-    this.conect.removeScript("src/plugins/src/flatpickr/custom-flatpickr.js")
+    this.designerForm =  this.formBuilder.group({
+      scheduledTime:[''],
+      note:[''],
+      designerId:[this.designerId],
+      userId:[this.userId]
+    })
+  }
+  async ngOnInit(){
+    const userResult = await this.userService.findbyemail(JSON.parse(sessionStorage.getItem("loggedInUser")));
+    this.userId = userResult['result'].id;
+    // console.log(userResult)
+    this.designerForm =  this.formBuilder.group({
+      scheduledTime:['',Validators.required],
+      status:[1],
+      note:[''],
+      designerId:[this.designerId],
+      userId:[this.userId]
+    })
 
     this.conect.addStyle("src/assets/css/light/components/list-group.css")
     this.conect.addStyle("src/assets/css/light/users/user-profile.css")
     this.conect.addStyle("src/assets/css/dark/components/list-group.css")
     this.conect.addStyle("src/assets/css/dark/users/user-profile.css")
-    this.conect.addStyle("src/plugins/css/light/flatpickr/custom-flatpickr.css")
-    this.conect.addStyle("src/plugins/css/dark/flatpickr/custom-flatpickr.css")
 
-    this.conect.addScript("src/plugins/src/highlight/highlight.pack.js")
-
-    this.conect.addScript("src/plugins/src/flatpickr/flatpickr.js")
-    this.conect.addScript("src/plugins/src/flatpickr/custom-flatpickr.js")
     // this.conect.reloadPage()
+    
+  }
 
+  send(){
+    let s = JSON.stringify(this.designerForm.value)
+    let fromData = new FormData()
+    fromData.append('desingerConsultation',s)
+    this.consultationService.createConsultation(fromData).then(
+      res=>{
+        if(res['result']){
+          alert('Scheduled successfully')
+        }
+        else{
+          alert('Scheduling failed')
+        }
+      }
+    )
+    console.log(this.designerForm.value)
   }
 }

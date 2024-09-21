@@ -1,5 +1,4 @@
-//using DecorVistaApi.Models;
-//using DecorVistaApi.Models;
+
 using DecorVistaApi.Dtos;
 using DecorVistaApi.Models;
 using DecorVistaApi.Services;
@@ -19,6 +18,7 @@ builder.Services.AddScoped<UserService, UserServiceImpl>();
 builder.Services.AddScoped<ProductsService, ProductsServiceImpl>();
 builder.Services.AddScoped<DesignerService, DesignerServiceImpl>();
 builder.Services.AddScoped<CartService, CartServiceImpl>();
+builder.Services.AddScoped<ConsultationService, ConsultationServiceImpl>();
 
 
 

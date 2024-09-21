@@ -79,4 +79,11 @@ public class UserServiceImpl : UserService
             return false;
         }
     }
+
+    public bool AddAddress(AddressDto addressdto)
+    {
+        var address = mapper.Map<Address>(addressdto);
+        db.Addresses.Add(address);
+        return db.SaveChanges() > 0;
+    }
 }

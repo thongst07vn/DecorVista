@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DecorVistaApi.Models;
+﻿namespace DecorVistaApi.Models;
 
 public partial class OrderDetail
 {
@@ -13,9 +10,9 @@ public partial class OrderDetail
 
     public int? Total { get; set; }
 
-    public DateOnly? CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; }
 
-    public DateOnly? UpdatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
 
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 

@@ -1,0 +1,231 @@
+<div class="main-container " id="container">
+    <!--  BEGIN CONTENT AREA  -->
+    <div style="margin-top: 0;" id="content" class="main-content">
+        <div class="layout-px-spacing">
+
+            <div class="middle-content container-xxl p-0">
+                <!--  END BREADCRUMBS  -->
+
+                <div class="row invoice layout-top-spacing layout-spacing">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                        <div style="width: 100%;" class="doc-container">
+
+                            <div style="width: 100%;" class="row">
+
+                                <div style="width: 100%;" class="col-xl-9">
+
+                                    <div style="width: 100%;" class="invoice-container">
+                                        <div class="invoice-inbox">
+
+                                            <div id="ct" class="">
+
+                                                <div class="invoice-00001">
+                                                    <div class="content-section">
+
+                                                        <div class="inv--head-section inv--detail-section">
+
+                                                            <div class="row">
+
+                                                                <div class="col-sm-6 col-12 mr-auto">        
+                                                                                                              
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-6">  
+                                                                    <form [formGroup]="addressForm">
+                                                                    <p>City</p>                                                                   
+                                                                    <select class="form-select" id="exampleFormControlSelect1" fdprocessedid="1r19oi" formControlName="city">
+                                                                        @for(c of city; track c){
+                                                                            <option value="{{c}}">{{c}}</option>
+                                                                        }                                                        
+                                                                    </select>
+                                                                    <p class="mt-3">Address</p> 
+                                                                    <div class="form-group mt-2">                                                                                                                                          
+                                                                        <input id="t-text" type="text" name="txt" placeholder="Address" class="form-control" formControlName="addressLine1">                                                                     
+                                                                    </div>
+                                                                    
+                                                                    </form>
+                                                                </div>
+                                                                
+                                                            </div>
+
+                                                        </div>
+
+                                                        <!-- <div class="inv--detail-section inv--customer-detail-section">
+
+                                                            <div class="row">
+
+                                                                <div
+                                                                    class="col-xl-8 col-lg-7 col-md-6 col-sm-4 align-self-center">
+                                                                    <p  class="inv-to">Transfer from</p>
+                                                                </div>
+
+                                                                <div
+                                                                    class="col-xl-4 col-lg-5 col-md-6 col-sm-8 align-self-center order-sm-0 order-1 text-sm-end mt-sm-0 mt-5">
+                                                                    <h6  class=" inv-to">Transfer to</h6>
+                                                                </div>
+
+                                                                <div class="col-xl-8 col-lg-7 col-md-6 col-sm-4">
+                                                                    <p class="inv-customer-name">Tran Anh Kiet</p>
+                                                                    <p class="inv-email-address">Phone: 0982938283</p>
+                                                                    <p class="inv-street-addr">35/6 đường D5, Q. Bình
+                                                                        Thạnh</p>
+
+                                                                </div>
+
+                                                                <div
+                                                                    class="col-xl-4 col-lg-5 col-md-6 col-sm-8 col-12 order-sm-0 order-1 text-sm-end">
+                                                                    <p class="inv-customer-name">Ngo Hoang Thong</p>
+                                                                    <p class="inv-email-address">Thonghn&#64;gmail.com
+                                                                    </p>
+                                                                    <p class="inv-email-address">Phone: 0935548823</p>
+                                                                    <p class="inv-street-addr">12 Hoàng Diệu 2, TP.Thủ
+                                                                        Đức <span>(Defaut Address)</span></p>
+                                                                    <button style="margin-top: 15px;" class="btn btn-success btn-lg mb-2">Change
+                                                                        Address</button>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div> -->
+
+                                                        <div class="inv--product-table-section">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead class="">
+                                                                        <tr>
+                                                                            <th>Image</th>
+                                                                            <th>Product Name</th>
+                                                                            <th>Brand</th>                                           
+                                                                            <th>Quantity</th>
+                                                                            <th>Price</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        @if(invoiceList){
+                                                                            @for(product of invoiceList; track product){
+                                                                                <tr>
+                                                                                    <td><img src="{{product.image}}"width="60" height="60" alt=""></td>
+                                                                                    <td>{{product.name}}</td>
+                                                                                    <td class="text-end">{{product.brand}}</td>
+                                                                                    <td class="text-end">{{product.quantity}}</td>
+                                                                                    <td class="text-end">{{product.price}} Vnđ</td>
+                                                                                </tr>
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        
+                                                                      
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                    <div class="inv--total-amounts">
+                                                        <form [formGroup]="orderForm" (ngSubmit)="BuyItems()">
+                                                            <div class="row">
+                                                                <div class="col-sm-5 col-12 order-sm-0 order-1">
+                                                                    <h3>Payment Method</h3>
+                                                                    <select class="form-select" id="exampleFormControlSelect1" fdprocessedid="1r19oi" formControlName="paymentType">
+                                                                        <option value="1">Credit</option>
+                                                                        <option value="2">Apple Pay</option>
+                                                                        <option value="3">Paypal</option>
+                                                                        <option value="4">Samsung Pay</option>
+                                                            
+                                                                    </select>
+                                                                    <!-- <div  class="btn-group  mb-2 me-4 btn-lg" role="group">
+                                                                        <button style="font-size: 18px;" id="outlineDropdown3" type="button" class="btn btn-outline-warning dropdown-toggle _effect--ripple waves-effect waves-light" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                                                                        
+                                                                        <div class="dropdown-menu" aria-labelledby="outlineDropdown3">
+                                                                            <a href="javascript:void(0);" class="dropdown-item"><i class="flaticon-home-fill-1 mr-1"></i>Action</a>
+                                                                            <a href="javascript:void(0);" class="dropdown-item"><i class="flaticon-gear-fill mr-1"></i>Another action</a>
+                                                                            <a href="javascript:void(0);" class="dropdown-item"><i class="flaticon-bell-fill-2 mr-1"></i>Something else here</a>
+                                                                            <a href="javascript:void(0);" class="dropdown-item"><i class="flaticon-dots mr-1"></i>Separated link</a>
+                                                                        </div>
+                                                                    </div> -->
+                                                                </div>
+                                                                <div class="col-sm-7 col-12 order-sm-1 order-0">
+                                                                    
+                                                                </div>     
+                                                            </div>
+    
+                                                            <div class="inv--total-amounts">
+    
+                                                                <div class="row mt-4">
+                                                                    <div class="col-sm-5 col-12 order-sm-0 order-1">
+                                                                    </div>
+                                                                    <div class="col-sm-7 col-12 order-sm-1 order-0">
+                                                                        <div class="text-sm-end">
+                                                                            <div class="row">
+                            
+                                                                                <div
+                                                                                    class="col-sm-8 col-7 grand-total-title mt-3">
+                                                                                    <p class="">Grand Total : </p>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="col-sm-4 col-5 grand-total-amount mt-3">
+                                                                                    
+                                                                                    <p class="">{{this.total}} Vnđ</p>
+                                                                                </div>
+                                                                                <!-- <div class="col-xl-12 col-md-3 col-sm-6" style="padding: 0;">
+                                                                                    <a href="javascript:void(0);"
+                                                                                        class="btn btn-secondary btn-print btn-lg  action-print" style="padding: 10px 60px;">Print</a>
+                                                                                </div> -->
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    
+    
+                                                            </div>
+    
+                                                            <div class="inv--note">
+    
+                                                                <div class="row mt-4">
+                                                                    <div class="col-sm-5 col-12 order-sm-0 order-1">
+                                                                        <div class="col-sm-12 col-12 order-sm-0 order-1">
+                                                                            <p>Note: Thank you for doing Business with us.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-7 col-12 order-sm-1 order-0">
+                                                                        <button style="float: right; padding: 10px 60px; margin-right: 0 !important;" class="btn btn-success btn-lg mb-2 me-4 custom-btn" type="submit" [disabled]="addressForm.invalid">Buy</button>
+                                                                    </div>
+                                                                </div>  
+    
+    
+                                                            </div>
+                                                        </form>
+                                                        
+
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--  END FOOTER  -->
+    </div>
+    <!--  END CONTENT AREA  -->
+
+    <!-- END MAIN CONTAINER -->

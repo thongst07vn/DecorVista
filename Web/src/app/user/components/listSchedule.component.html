@@ -1,0 +1,43 @@
+<div class="row" id="cancel-row">               
+    <div class="col-xl-12 col-lg-12 col-sm-12 layout-top-spacing layout-spacing">
+        <div class="widget-content widget-content-area br-8">
+            <table id="individual-col-search" class="table dt-table-hover" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Scheduled Time</th>
+                        <th>Status</th>                                           
+                        <th>note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if(consultationItems!=null){
+                        @for(con of consultationItems; track con){
+                            <tr>
+
+                                <td><span>{{con.username}}</span></td>
+                                <td><span>{{con.scheduledTime}}</span></td>
+                                @if(con.status==1){
+                                    <td class="text-center"><span class="shadow-none badge badge-waring">waiting</span></td>
+                                }
+                                @else if(con.status==2){
+                                    <td class="text-center"><span class="shadow-none badge badge-primary">accept</span></td>
+                                }
+                                @else if(con.status==3){
+                                    <td class="text-center"><span class="shadow-none badge badge-danger">refuse</span></td>
+                                }
+                                <td><span class="inv-amount">{{con.note}}</span></td>
+                            </tr>
+                        }
+                    }
+                    
+                </tbody>
+            </table>
+            <div style="float: right;" class="mb-2  btn-lg">
+                <button class="btn btn-success mb-2  btn-lg " style="padding-left: 55px; padding-right: 55px;">Buy</button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>

@@ -28,31 +28,31 @@ body.dark .invoice-container {
 }
 body.dark .invoice-inbox {
   padding: 0;
-  background-color: #0e1726;
+  background-color: #193A2D;
   box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
   border-radius: 8px;
-  border: 1px solid #0e1726;
+  border: 1px solid #193A2D;
 }
 body.dark .invoice-inbox .inv-number {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 0;
-  color: #888ea8;
+  color: white;
 }
 body.dark .invoice-inbox .invoice-action svg {
   cursor: pointer;
   font-weight: 600;
-  color: #888ea8;
+  color: white;
   margin-right: 6px;
   vertical-align: middle;
-  fill: rgba(0, 23, 55, 0.08);
+  fill: #193A2D;
 }
 body.dark .invoice-inbox .invoice-action svg:not(:last-child) {
   margin-right: 15px;
 }
 body.dark .invoice-inbox .invoice-action svg:hover {
   color: #4361ee;
-  fill: rgba(27, 85, 226, 0.2392156863);
+  fill: #193A2D;
 }
 
 /*
@@ -67,7 +67,7 @@ body.dark .invoice .content-section .inv--head-section {
   padding: 36px 35px;
   margin-bottom: 40px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #191e3a;
+  border-bottom: 1px solid #3b5d4f;
 }
 body.dark .inv--customer-detail-section {
   padding: 36px 35px;
@@ -93,7 +93,7 @@ body.dark .invoice .content-section .inv--head-section div.company-info svg {
   height: 42px;
   margin-right: 10px;
   color: #61b6cd;
-  fill: rgba(27, 85, 226, 0.2392156863);
+  fill: #3b5d4f;
 }
 body.dark .invoice .content-section .inv--head-section .inv-brand-name {
   font-size: 23px;
@@ -126,13 +126,13 @@ body.dark .invoice .content-section .inv--detail-section .inv-street-addr {
   /* font-weight: 600; */
   margin-bottom: 2px;
   font-size: 15px;
-  color: #888ea8;
+  color: white;
 }
 body.dark .invoice .content-section .inv--detail-section .inv-email-address {
   font-weight: 600;
   margin-bottom: 2px;
   font-size: 15px;
-  color: #888ea8;
+  color: white;
 }
 body.dark .invoice .content-section .inv--detail-section .inv-list-number {
   margin-bottom: 2px;
@@ -148,7 +148,7 @@ body.dark .invoice .content-section .inv--detail-section .inv-list-number .inv-n
 }
 body.dark .invoice .content-section .inv--detail-section .inv-created-date, body.dark .invoice .content-section .inv--detail-section .inv-due-date {
   margin-bottom: 2px;
-  color: #888ea8;
+  color: white;
 }
 body.dark .invoice .content-section .inv--detail-section .inv-created-date .inv-title, body.dark .invoice .content-section .inv--detail-section .inv-due-date .inv-title {
   font-weight: 700;
@@ -188,14 +188,14 @@ body.dark .invoice .content-section .inv--product-table-section tr td:last-child
   padding-right: 35px;
 }
 body.dark .invoice .content-section .inv--product-table-section td {
-  color: #888ea8;
+  color: white;
   border: none;
   padding: 10px 25px;
   vertical-align: top !important;
   font-size: 15px;
 }
 body.dark .invoice .content-section .inv--product-table-section tbody tr {
-  border-bottom: 1px solid #191e3a;
+  border-bottom: 1px solid #3b5d4f;
 }
 body.dark .invoice .content-section .inv--product-table-section tbody tr:nth-of-type(even) td {
   background-color: rgba(3, 3, 5, 0.122) !important;
@@ -221,14 +221,14 @@ body.dark .invoice .content-section .inv--payment-info p {
 body.dark .invoice .content-section .inv--payment-info span {
   font-weight: 500;
   display: inline-block;
-  color: #888ea8;
+  color: white;
   white-space: nowrap;
 }
 body.dark .invoice .content-section .inv--payment-info .inv-subtitle {
   font-weight: 600;
   font-size: 15px;
   display: inline-block;
-  color: #888ea8;
+  color: white;
   white-space: normal;
   margin-right: 4px;
 }
@@ -236,7 +236,7 @@ body.dark .invoice .content-section .inv--total-amounts {
   padding: 0 35px;
   margin-bottom: 25px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #191e3a;
+  border-bottom: 1px solid #3b5d4f;
 }
 body.dark .invoice .content-section .inv--total-amounts .grand-total-title h4, body.dark .invoice .content-section .inv--total-amounts .grand-total-amount h4 {
   position: relative;
@@ -264,7 +264,7 @@ body.dark .inv--note {
 body.dark .inv--note p {
   margin-bottom: 0;
   font-weight: 600;
-  color: #888ea8;
+  color: white;
 }
 @media print {
   body.dark body * {

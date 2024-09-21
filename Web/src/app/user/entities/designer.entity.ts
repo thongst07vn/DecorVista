@@ -6,6 +6,6 @@ export class Designer{
     role: number;
     contactnumber:string;
     avatar:string;
-    yearofexp:number;
+    yearofexp:string;
     specialization:string;
 }

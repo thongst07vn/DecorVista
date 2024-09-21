@@ -9,7 +9,7 @@ public partial class Consultation
 
     public DateTime? ScheduledTime { get; set; }
 
-    public string? Status { get; set; }
+    public int? Status { get; set; }
 
     public string? Notes { get; set; }
 

@@ -10,7 +10,7 @@
                 style="display: inline-block; margin-bottom: 30px; ">
                 <div class="user-profile">
                     <div class="widget-content widget-content-area" style="padding: 50px; ">
-                        <div class="d-flex justify-content-between">
+                        <!-- <div class="d-flex justify-content-between">
                             <h2
                                 style="font-size: 30px; font-weight: bold; text-transform: uppercase; letter-spacing: 1.5px; text-align: center; margin: 20px 0;">
                                 PROFILE
@@ -23,17 +23,8 @@
                                     <path d="M12 20h9"></path>
                                     <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
                                 </svg></a>
-                        </div>
+                        </div> -->
                         <div class="text-center user-info">
-                            @if(user != null){
-                                @if(user.avatar.substring(0,5)=="https"){
-                                    <img src="{{user.avatar}}" alt="avatar" width="150" height="150">
-                                }
-                                @else{
-                                    <img src="images/{{user.avatar}}" alt="avatar" width="150" height="150">
-                                }
-                                <p>{{user.username}}</p>
-                            }
                             @if(designer != null){
                                 @if(designer.avatar.substring(0,5)=="https"){
                                     <img src="{{designer.avatar}}" alt="avatar" width="150" height="150">
@@ -61,9 +52,6 @@
                                                 <line x1="14" y1="1" x2="14" y2="4"></line>
                                             </svg>
                                             <span>
-                                                @if(user != null){
-                                                    User
-                                                }
                                                 @if(designer != null){
                                                     Designer
                                                 }
@@ -81,9 +69,6 @@
                                                 </path>
                                                 <polyline points="22,6 12,13 2,6"></polyline>
                                             </svg>
-                                            @if(user != null){
-                                                <strong>{{user.email}}</strong>
-                                            }
                                             @if(designer != null){
                                                 <strong>{{designer.email}}</strong>
                                             }
@@ -99,12 +84,6 @@
                                                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
                                                 </path>
                                             </svg>
-                                            @if(user != null){
-                                                @if(user.contactnumber == null){
-                                                    <strong>Updating...</strong>
-                                                }
-                                                <strong>{{user.contactnumber}}</strong>
-                                            }
                                             @if(designer != null){
                                                 <strong>{{designer.contactnumber}}</strong>
                                             }
@@ -171,7 +150,7 @@
             <div class="row">
                 <!-- START SUMARRY (INCOME, PROFIT....) -->
 
-                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <!-- <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                     <div class="summary layout-spacing ">
                         <div class="widget-content widget-content-area">
                             <h3 class="">Summary</h3>
@@ -261,12 +240,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- END SUMARRY (INCOME, PROFIT....) -->
 
                 <!-- START PRO PLAN  -->
 
-                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <!-- <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                     <div class="summary layout-spacing ">
                         <div class="widget-content widget-content-area" style="height: 303px;">
                             <h3 class="">Interest</h3>
@@ -330,13 +309,13 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- END PRO PLAN  -->
 
                 <!-- START PAYMENT HISTORY  -->
 
-                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <!-- <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                     <div class="payment-history layout-spacing ">
                         <div class="widget-content widget-content-area">
                             <h3 class="">Payment History</h3>
@@ -418,12 +397,12 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- START PAYMENT HISTORY  -->
 
                 <!-- START PAYMENT METHOd  -->
 
-                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <!-- <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                     <div class="payment-methods layout-spacing ">
                         <div class="widget-content widget-content-area">
                             <h3 class="">Payment Methods</h3>
@@ -460,9 +439,9 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- END PAYMENT METHOD -->
 
-        </div>
+            </div>
     </div>
 </div>

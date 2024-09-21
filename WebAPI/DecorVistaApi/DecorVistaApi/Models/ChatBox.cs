@@ -9,7 +9,9 @@ public partial class ChatBox
 
     public int? DesignerId { get; set; }
 
-    public DateOnly? ChatDay { get; set; }
+    public DateTime? ChatDay { get; set; }
+
+    public bool? ChatType { get; set; }
 
     public string? Message { get; set; }
 

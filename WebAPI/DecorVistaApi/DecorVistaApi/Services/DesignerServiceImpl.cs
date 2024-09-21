@@ -42,6 +42,7 @@ public class DesignerServiceImpl : DesignerService
     {
         try
         {
+
             var d = mapper.Map<Designer>(designerdto);
             db.Designers.Add(d);
             return db.SaveChanges() > 0;

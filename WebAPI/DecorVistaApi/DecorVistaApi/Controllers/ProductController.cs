@@ -24,4 +24,21 @@ public class ProductController : Controller
             return BadRequest();
         }
     }
+    [Produces("application/json")]
+    [HttpGet("findbyid/{id}")]
+    public IActionResult FindById(int id)
+    {
+        try
+        {
+
+            return Ok(new
+            {
+                result = productService.FindById(id)
+            });
+        }
+        catch
+        {
+            return BadRequest();
+        }
+    }
 }

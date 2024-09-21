@@ -4,6 +4,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { Conect } from '../../../conect';
 import { UserService } from '../../services/user.service';
 import { User } from '../../entities/user.entity';
+import { DesignerService } from '../../services/designer.service';
+import { Designer } from '../../entities/designer.entity';
 
 
 @Component({
@@ -16,16 +18,31 @@ import { User } from '../../entities/user.entity';
 })
 export class ProfileComponent implements OnInit {
   user:User
+  designer:Designer
   constructor(
     private conect : Conect,
-    private userService: UserService
+    private userService: UserService,
+    private designerService : DesignerService 
+
   ){}
   ngOnInit(): void {
-    console.log(JSON.parse(sessionStorage.getItem("loggedInUser")))
 
     this.userService.findbyemail(JSON.parse(sessionStorage.getItem("loggedInUser"))).then(
       res=>{
-          this.user = res['result'] as User
+          if(res['result']!=null){
+            this.user = res['result'] as User
+          }
+          console.log(this.user)
+      },
+      error=>{
+        console.log(error)
+      }
+    )
+    this.designerService.findbyemail(JSON.parse(sessionStorage.getItem("loggedInUser"))).then(
+      res=>{
+        if(res['result']!=null){
+          this.designer = res['result'] as Designer
+        }
           console.log(this.user)
       },
       error=>{

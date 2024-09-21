@@ -3,7 +3,7 @@
     <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-4">
 
         <div class="widget-content widget-content-area br-8">
-
+        @if(product != null){
             <div class="row justify-content-center">
                 <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-7 col-sm-9 col-12 pe-3">
                     <!-- Swiper -->
@@ -11,48 +11,44 @@
                         <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide">
-                                        <a href="../src/assets/img/ecommerce-1.jpg" class="glightbox">
-                                            <img alt="ecommerce" src="../src/assets/img/ecommerce-1.jpg">
+                                        <a href="{{product.image}}" class="glightbox">
+                                            <img alt="ecommerce" src="{{product.image}}">
                                         </a>
                                     </li>
                                     <li class="splide__slide">
-                                        <a href="../src/assets/img/ecommerce-2.jpg" class="glightbox">
-                                            <img alt="ecommerce" src="../src/assets/img/ecommerce-2.jpg">
+                                        <a href="{{product.image}}" class="glightbox">
+                                            <img alt="ecommerce" src="{{product.image}}">
                                         </a>
                                     </li>
                                     <li class="splide__slide">
-                                        <a href="../src/assets/img/ecommerce-4.jpg" class="glightbox">
-                                            <img alt="ecommerce" src="../src/assets/img/ecommerce-4.jpg">
+                                        <a href="{{product.image}}" class="glightbox">
+                                            <img alt="ecommerce" src="{{product.image}}">
                                         </a>
                                     </li>
                                     <li class="splide__slide">
-                                        <a href="../src/assets/img/ecommerce-5.jpg" class="glightbox">
-                                            <img alt="ecommerce" src="../src/assets/img/ecommerce-5.jpg">
+                                        <a href="{{product.image}}" class="glightbox">
+                                            <img alt="ecommerce" src="{{product.image}}">
                                         </a>
                                     </li>
                                     <li class="splide__slide">
-                                        <a href="../src/assets/img/ecommerce-6.jpg" class="glightbox">
-                                            <img alt="ecommerce" src="../src/assets/img/ecommerce-6.jpg">
+                                        <a href="{{product.image}}" class="glightbox">
+                                            <img alt="ecommerce" src="{{product.image}}">
                                         </a>
                                     </li>
                                 </ul>
                         </div>
-                        </div>
-
-                        <div id="thumbnail-slider" class="splide">
+                    </div>
+                    <div id="thumbnail-slider" class="splide">
                         <div class="splide__track">
                                 <ul class="splide__list">
-                                    <li class="splide__slide"><img alt="ecommerce" src="../src/assets/img/ecommerce-1.jpg"></li>
-                                    <li class="splide__slide"><img alt="ecommerce" src="../src/assets/img/ecommerce-2.jpg"></li>
-                                    <li class="splide__slide"><img alt="ecommerce" src="../src/assets/img/ecommerce-4.jpg"></li>
-                                    <li class="splide__slide"><img alt="ecommerce" src="../src/assets/img/ecommerce-5.jpg"></li>
-                                    <li class="splide__slide"><img alt="ecommerce" src="../src/assets/img/ecommerce-6.jpg"></li>
+                                    <li class="splide__slide"><img alt="ecommerce" src="{{product.image}}"></li>
+                                    <li class="splide__slide"><img alt="ecommerce" src="{{product.image}}"></li>
+                                    <li class="splide__slide"><img alt="ecommerce" src="{{product.image}}"></li>
+                                    <li class="splide__slide"><img alt="ecommerce" src="{{product.image}}"></li>
+                                    <li class="splide__slide"><img alt="ecommerce" src="{{product.image}}"></li>
                                 </ul>
                         </div>
-                        
-                        </div>
-                        
-
+                    </div>
                 </div>
 
                 <div class="col-xxl-4 col-xl-5 col-lg-12 col-md-12 col-12 mt-xl-0 mt-5 align-self-center">
@@ -64,23 +60,14 @@
                         
                         <div class="post-meta-info d-flex justify-content-between">
                             <div>
-                                <h3 class="product-title mb-0">Name Pictures</h3>
+                                <h3 class="product-title mb-0">{{product.name}}</h3>
                                 <!-- lượt đánh giá -->
                                 <a href="user/product-details/#comment" class="review mb-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                                     <span class="rating-score">4.88 <span class="rating-count">(200 Reviews)</span></span>
                                 </a>
                             </div>
-                            <a [routerLink]="['../profile']" class="post-meta-info d-flex justify-content-between">
-                                
-                                <div class="media-body mt-2">
-                                    <h4 class="media-heading mx-2 mt-3">Shaun Park</h4>
-                                    <!-- <p class="media-text mx-3">01 May</p> -->
-                                </div>
-                                <div class="avatar avatar-xl">
-                                    <img alt="avatar" src="../src/assets/img/profile-12.jpeg" class="rounded-circle" />
-                                </div>
-                            </a>
+                            
                         </div>
                         
 
@@ -90,34 +77,68 @@
 
                                 <div class="pricing">
 
-                                    <span class="discounted-price">$20</span>
+                                    <span class="discounted-price">{{formattedPrice(product.price)}} vnđ</span>
                                     <!-- <span class="regular-price">$30</span>   -->
                                     
                                 </div>
-                                
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-3">
+                                <div class="product-share">
+                                    <h4 class="media-heading mt-3">Brand</h4>
+                                    <p class="media-text">{{product.brand}}</p>
+                                </div>
                             </div>
                             
                         </div>                                            
 
                         <hr class="mb-3">
-                        <div class="row size-selector mb-3">
+                        <!-- <div class="row size-selector mb-3">
                             <div class="col-xl-9 col-lg-6 col-sm-6 align-self-center"> Id: 0810200</div>
-                        </div>
+                        </div> -->
                         <div class="row size-selector mb-3 ">
                             <div class="col-xl-6 col-lg-6 col-sm-6 mt-sm-3">Size: 30 x 40 cm each</div>
                         </div>
-                        
-                        <div class="row quantity-selector mb-3">
-                            <div class="col-xl-6 col-lg-6 col-sm-6 mt-sm-3">Medium: Acryl</div>
-                            
+                        <div class="row color-swatch mb-4">
+                            <div class="col-xl-3 col-lg-6 col-sm-6 align-self-center">Color</div>
+                            <div class="col-xl-9 col-lg-6 col-sm-6">
+                                <div class="color-options text-xl-end">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault7">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="row quantity-selector mb-3">
+                        <div class="row quantity-selector mb-4">
+                            <div class="col-xl-6 col-lg-6 col-sm-6 mt-sm-3">Quantity</div>
+                            <div class="col-xl-6 col-lg-6 col-sm-6">
+                                <input id="demo1" type="text" value="1" name="demo1">
+                                <!-- <p class="text-danger product-helpers text-end mt-2">Low Stock</p> -->
+                            </div>
+                        </div>
+                        <!-- <div class="row quantity-selector mb-3">
                             <div class="col-xl-6 col-lg-6 col-sm-6 mt-sm-3">Material: Paper</div>
-                        </div>
-                        <div class="row quantity-selector mb-3">
+                        </div> -->
+                        <!-- <div class="row quantity-selector mb-3">
                             <div class="col-xl-6 col-lg-6 col-sm-6 mt-sm-3">Year: 2024</div>
-                        </div>
+                        </div> -->
                         
                         <hr class="mb-3">
 
@@ -125,8 +146,8 @@
 
                             <div class="row quantity-selector mb-4">
                                 <div class="col-xxl-7 col-xl-7 col-sm-6 mb-sm-0 mb-3" style="text-align: left;">
-                                     <div class="col-xl-6 col-lg-6 col-sm-6"> Know the artist:</div>
-                                     <!-- CHỖ NÀY LINK TỚI PROFILE ARTIST -->
+                                    <div class="col-xl-6 col-lg-6 col-sm-6"> Know the artist:</div>
+                                    <!-- CHỖ NÀY LINK TỚI PROFILE ARTIST -->
                                 </div>
                                 <div class="col-xxl-5 col-xl-5 col-sm-6">
                                     <div >Name of artist</div>
@@ -134,12 +155,12 @@
                                 <br>
                                 <div class="col-xxl-7 col-xl-7 col-sm-6 mb-sm-0 mb-3 mt-4" style="text-align: left;">
                                     <div class="col-xl-6 col-lg-6 col-sm-6" > Availability:</div>
-                               </div>
-                               <div class="col-xxl-5 col-xl-5 col-sm-6 mt-4  ">
-                                   <div >In stock </div> 
-                                   <!-- CHỖ NÀY CÓ ĐỔI MÀU: XANH - CÒN HÀNG, ĐỎ HẾT HÀNG -->
-                               </div>
-                               
+                            </div>
+                            <div class="col-xxl-5 col-xl-5 col-sm-6 mt-4  ">
+                                <div >In stock </div> 
+                                <!-- CHỖ NÀY CÓ ĐỔI MÀU: XANH - CÒN HÀNG, ĐỎ HẾT HÀNG -->
+                            </div>
+                            
 
                                 <div class="col-xxl-7 col-xl-7 col-sm-6 mb-sm-0 mb-3 mt-4">
                                     <button class="btn btn-warning w-100 btn-lg" (click)="addToCart()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> <span class="btn-text-inner">Add To Cart</span></button>
@@ -162,6 +183,7 @@
                     
                 </div>
             </div>
+        }
 
         </div>
 

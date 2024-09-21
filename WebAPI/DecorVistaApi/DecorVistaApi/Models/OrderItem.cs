@@ -11,8 +11,6 @@ public partial class OrderItem
 
     public int? ProductId { get; set; }
 
-    public int? ProductsSkuId { get; set; }
-
     public int? Quantity { get; set; }
 
     public virtual Product? Order { get; set; }

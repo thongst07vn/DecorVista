@@ -40,7 +40,7 @@
                 aria-labelledby="animated-underline-home-tab">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 layout-spacing">
-                        <form class="section general-info">
+                        <form class="section general-info" [formGroup]="editProfile" (ngSubmit)="edit()">
                             <div class="info">
                                 <h6 class="">General Information</h6>
                                 <div class="row">
@@ -55,7 +55,7 @@
 
                                                     <div class="img-uploader-content">
                                                         <input type="file" class="filepond" name="filepond"
-                                                            accept="image/png, image/jpeg, image/gif" />
+                                                            accept="image/png, image/jpeg, image/gif"/>
                                                     </div>
 
                                                 </div>
@@ -65,11 +65,8 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label style="font-weight: 600;" for="fullName">Full
-                                                                    Name</label>
-                                                                <input type="text" class="form-control mb-3"
-                                                                    id="fullName" placeholder="Full Name"
-                                                                    value="Ngo Hoang Thong">
+                                                                <label style="font-weight: 600;" for="username">Full Name</label>
+                                                                <input type="text" class="form-control mb-3" id="username" formControlName="username">
                                                             </div>
                                                         </div>
 
@@ -77,15 +74,15 @@
                                                             <div class="form-group">
                                                                 <label style="font-weight: 600;"
                                                                     for="country">Profession</label>
-                                                                <select class="form-select mb-3" id="country">
-                                                                    <option selected>Buyer</option>
-                                                                    <option>Seller</option>
+                                                                <select class="form-select mb-3" formControlName="role">
+                                                                    <option value="1">User</option>
+                                                                    <option value="2">Designer</option>
                                                                 </select>
                                                             </div>
                                                         </div>
 
 
-                                                        <div class="col-md-6">
+                                                        <!-- <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label style="font-weight: 600;"
                                                                     for="country">Country</label>
@@ -100,39 +97,46 @@
                                                                     <option>Canada</option>
                                                                 </select>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
 
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label style="font-weight: 600;"
-                                                                    for="phone">Phone</label>
-                                                                <input type="text" class="form-control mb-3" id="phone"
-                                                                    placeholder="Write your phone number here"
-                                                                    value="+84 346006090">
+                                                                    for="contactnumber">Phone</label>
+                                                                <input type="text" class="form-control mb-3" id="contactnumber"
+                                                                    formControlName="contactnumber">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label style="font-weight: 600;"
-                                                                    for="phone">Email</label>
+                                                                    for="email">Email</label>
                                                                 <input type="text" class="form-control mb-3" id="email"
-                                                                    placeholder="Write your email here"
-                                                                    value="tnbao1009gmail.com">
+                                                                    formControlName="email">
                                                             </div>
                                                         </div>
-
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <label style="font-weight: 600;"
-                                                                    style="font-weight: 600;" for="phone">Date Of
-                                                                    Birth</label>
-                                                                <input type="text" class="form-control mb-3" id="dob"
-                                                                    name="dob" placeholder="Write your dob hear">
+                                                        @if(flag){
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label style="font-weight: 600;"
+                                                                        style="font-weight: 600;" for="yearofexp">Year Of Object</label>
+                                                                    <input type="text" class="form-control mb-3" id="yearofexp"
+                                                                        name="yearofexp"  formControlName="yearofexp">
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label style="font-weight: 600;"
+                                                                        style="font-weight: 600;" for="specialization">Specialization</label>
+                                                                    <input type="text" class="form-control mb-3" id="specialization"
+                                                                        name=""  formControlName="specialization">
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                        
 
-                                                        <div class="col-md-12 mt-1">
+                                                        <!-- <div class="col-md-12 mt-1">
                                                             <p style="font-weight: 600;"
                                                                 for="Interest">Interest</p>
                                                             <div class="form-check">
@@ -156,9 +160,9 @@
                                                                         Romantic Picture
                                                                 </label>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
 
-                                                        <div class="col-md-12 mt-1">
+                                                        <!-- <div class="col-md-12 mt-1">
                                                             <label style="font-weight: 600;" for="email">Gender</label>
 
                                                             <div style="margin-left: 30px;" class="form-group">
@@ -169,7 +173,7 @@
                                                                     <input type="radio" name="gender" value="female"> Nữ
                                                                 </label>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
 
                                                         <div class="col-md-12 mt-1"
                                                             style="margin-top: 20px !important;">
@@ -183,7 +187,7 @@
 
                                                         <div class="col-md-12 mt-1">
                                                             <div class="form-group text-end">
-                                                                <button class="btn btn-secondary">Save</button>
+                                                                <button class="btn btn-secondary" type="submit">Save</button>
                                                             </div>
                                                         </div>
 

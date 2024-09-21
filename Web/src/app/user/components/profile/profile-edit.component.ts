@@ -2,18 +2,28 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Conect } from '../../../conect';
+import { User } from '../../entities/user.entity';
+import { Designer } from '../../entities/designer.entity';
+import { UserService } from '../../services/user.service';
+import { DesignerService } from '../../services/designer.service';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,FormsModule,ReactiveFormsModule],
   templateUrl: './profile-edit.component.html',
   host:{
     'collision': 'ProfileEditComponent'
   }
 })
 export class ProfileEditComponent implements OnInit {
+  editProfile: FormGroup
+  flag:boolean
   constructor(
-    private conect : Conect
+    private conect : Conect,
+    private userService: UserService,
+    private designerService : DesignerService,
+    private formBuilder : FormBuilder
   ){}
   ngOnInit(): void {
     this.conect.removeScript("src/plugins/src/glightbox/glightbox.min.js")
@@ -30,14 +40,9 @@ export class ProfileEditComponent implements OnInit {
     this.conect.addStyle("src/assets/css/light/scrollspyNav.css");
     this.conect.addStyle("src/assets/css/light/components/carousel.css");
     this.conect.addStyle("src/assets/css/light/components/modal.css");
-
     this.conect.addStyle("src/assets/css/dark/scrollspyNav.css");
     this.conect.addStyle("src/assets/css/dark/components/carousel.css");
     this.conect.addStyle("src/assets/css/dark/components/modal.css");
-
-
-
-
     this.conect.addStyle("src/plugins/src/filepond/filepond.min.css")
     this.conect.addStyle("src/plugins/src/filepond/FilePondPluginImagePreview.min.css")
     this.conect.addStyle("src/plugins/src/notification/snackbar/snackbar.min.css")
@@ -70,7 +75,53 @@ export class ProfileEditComponent implements OnInit {
     this.conect.addScriptAsync("src/plugins/src/notification/snackbar/snackbar.min.js")
     this.conect.addScriptAsync("src/plugins/src/sweetalerts2/sweetalerts2.min.js")
     this.conect.addScriptAsync("src/assets/js/users/account-settings.js")
+    this.userService.findbyemail(JSON.parse(sessionStorage.getItem("loggedInUser"))).then(
+      res=>{
+        if(res['result'] !=null){
+          let user = res['result'] as User
+          // console.log(user)
 
+          this.flag = false
+          this.editProfile = this.formBuilder.group({
+              // id:[user.id],
+              username : [user.username,Validators.required],
+              // avatar:[user.avatar],
+              email: [user.email, Validators.required],
+              role:[user.role],
+              contactnumber:[user.contactnumber,Validators.required]
+          })
+        }else{
+          this.designerService.findbyemail(JSON.parse(sessionStorage.getItem("loggedInUser"))).then(
+            res=>{
+              if(res['result'] != null){
+                let designer = res['result'] as Designer
+                // console.log(designer.username)
+                this.flag = true
+                this.editProfile = this.formBuilder.group({
+                  // id:[designer.id],
+                  username : [designer.username,Validators.required],
+                  // avatar:[designer.avatar],
+                  email: [designer.email, Validators.required],
+                  role:[designer.role],
+                  contactnumber:[designer.contactnumber,Validators.required],
+                  yearofexp:[designer.yearofexp],
+                  specialization:[designer.specialization]
+                })
+              }
+            },
+            error=>{
+              console.log(error)
+            }
+          )
+        }
+      },
+      error=>{
+        console.log(error)
+      }
+    )
     // this.conect.reloadPage()
+  }
+  edit(){
+
   }
 }

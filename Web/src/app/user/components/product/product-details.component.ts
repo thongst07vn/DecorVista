@@ -1,7 +1,9 @@
 
 import { Component, OnInit } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { Conect } from '../../../conect';
+import { ProductSevice } from '../../services/product.service';
+import { Product } from '../../entities/product.entity';
 
 @Component({
   standalone: true,
@@ -12,11 +14,12 @@ import { Conect } from '../../../conect';
   }
 })
 export class ProductDetailsComponent implements OnInit {
+  product:Product
   constructor(
     private conect : Conect,
-  ){
-    
-  }
+    private productService: ProductSevice,
+    private activedRoute: ActivatedRoute
+  ){}
   ngOnInit(): void {
 
     this.conect.removeScript("src/plugins/src/glightbox/glightbox.min.js")
@@ -47,7 +50,21 @@ export class ProductDetailsComponent implements OnInit {
     this.conect.addScriptAsync("src/plugins/src/splide/splide.min.js")
     this.conect.addScriptAsync("src/assets/js/apps/ecommerce-details.js")
     // this.conect.reloadPage()
-    
+    this.activedRoute.paramMap.subscribe(
+      params => {
+        this.productService.findProductId(parseInt(params.get('productId'))).then(
+          res=>{
+            this.product = res['result'] as Product
+          },
+          error=>{
+            console.log(error)
+          }
+        )
+      }
+    )
+  }
+  formattedPrice(price: { toString: () => string; }){
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
   }
   addToCart(){
     window.location.href = '/user/add-to-cart'

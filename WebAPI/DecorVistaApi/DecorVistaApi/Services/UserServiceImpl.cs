@@ -35,6 +35,13 @@ public class UserServiceImpl : UserService
         {
             var user = mapper.Map<User>(userdto);
             db.Users.Add(user);
+            if (db.SaveChanges() > 0)
+            {
+                var cart = new Cart();
+                cart.Id = user.Id;
+                cart.Total = 0;
+                db.Carts.Add(cart);
+            }
             return db.SaveChanges() > 0;
         }
         catch
@@ -58,6 +65,13 @@ public class UserServiceImpl : UserService
         {
             var user = mapper.Map<User>(userdto);
             db.Users.Add(user);
+            if (db.SaveChanges() > 0)
+            {
+                var cart = new Cart();
+                cart.Id = user.Id;
+                cart.Total = 0;
+                db.Carts.Add(cart);
+            }
             return db.SaveChanges() > 0;
         }
         catch

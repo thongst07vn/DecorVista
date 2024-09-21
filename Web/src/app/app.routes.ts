@@ -9,6 +9,8 @@ import { SignUpComponent } from './user/login/signup.component';
 import { ContactUsComponent } from './user/components/contactUs.component';
 import { AddtoCardComponent } from './user/components/product/addtocard.component';
 import { ChatBoxComponent } from './user/components/profile/chatBox.component';
+import { DesignerContactComponent } from './user/components/designerContact.component';
+import { DesignerProfileComponent } from './user/components/designerProfile.component';
 
 
 export const routes: Routes = [
@@ -18,7 +20,10 @@ export const routes: Routes = [
         children:[
             {
                 path:'home',
-                component:HomeComponent
+                component:HomeComponent,
+                data:{
+                    addActive: 'home',
+                }
             },
             {
                 path:'profile',
@@ -31,10 +36,16 @@ export const routes: Routes = [
             {
                 path:'product-details',
                 component:ProductDetailsComponent,
+                data:{
+                    addActive: 'home',
+                }
             },
             {
                 path:'contact-us',
                 component:ContactUsComponent,
+                data:{
+                    addActive: 'contactUs',
+                }
             },
             {
                 path:'add-to-cart',
@@ -43,6 +54,20 @@ export const routes: Routes = [
             {
                 path:'chat',
                 component:ChatBoxComponent
+            },
+            {
+                path:'designer-contact',
+                component:DesignerContactComponent,
+                data:{
+                    addActive: 'designer',
+                }
+            },
+            {
+                path:'designer-detail',
+                component:DesignerProfileComponent,
+                data:{
+                    addActive: 'designer',
+                }
             }
         ]
     },

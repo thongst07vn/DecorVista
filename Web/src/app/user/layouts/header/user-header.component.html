@@ -56,7 +56,23 @@
             <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="avatar-container">
                     <div class="avatar avatar-sm avatar-indicators avatar-online">
-                        <img alt="avatar" src="../src/assets/img/profile-30.png" class="rounded-circle">
+                        @if(user != null ){
+                            @if(user.avatar.substring(0,5)=="https"){
+                                <img src="{{user.avatar}}"  class="rounded-circle">
+                            }
+                            @else{
+                                <img src="images/{{user.avatar}}"  class="rounded-circle">
+                            }
+                        }
+                        @if(designer != null){
+                            @if(designer.avatar.substring(0,5)=="https"){
+                                <img src="{{designer.avatar}}"  class="rounded-circle">
+                            }
+                            @else{
+                                <img src="images/{{designer.avatar}}"  class="rounded-circle">
+                            }
+                        }
+                        
                     </div>
                 </div>
             </a>
@@ -68,8 +84,14 @@
                             <img src="../src/assets/img/waving-hand.svg" style="border: none;">
                         </div>
                         <div class="media-body">
-                            <h5>{{user.username}}</h5>
-                            <p>Project Leader</p>
+                            @if(user != null ){
+                                <h5>{{user.username}}</h5>
+                                <p>User</p>
+                            }
+                            @if(designer != null){
+                                <h5>{{designer.username}}</h5>
+                                <p>Designer</p>
+                            }
                         </div>
                     </div>
                 </div>

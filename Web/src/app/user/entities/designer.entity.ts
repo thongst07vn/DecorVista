@@ -1,5 +1,5 @@
 export class Designer{
-    id:number;
+    designerId:number;
     username: string;
     email:string;
     password:string;

@@ -6,15 +6,15 @@ import { BaseURLService } from "./baseURL.service";
 @Injectable({
     providedIn: 'root'
 })
-export class ProductSevice{
+export class CartService{
     constructor(
         private httpClient: HttpClient,
         private baseUrlService : BaseURLService
     ){}
-    async findAllProduct(){
-        return lastValueFrom(this.httpClient.get(this.baseUrlService.BASE_URL+'product/findall'))
+    async addToCart(cartItem:any){
+        return lastValueFrom(this.httpClient.post(this.baseUrlService.BASE_URL+'cart/addtocart',cartItem))
     }
-    async findProductId(productId:number){
-        return lastValueFrom(this.httpClient.get(this.baseUrlService.BASE_URL+'product/findbyid/'+productId))
+    async innerCart(userid:number){
+        return lastValueFrom(this.httpClient.get(this.baseUrlService.BASE_URL+'cart/innercart/'+userid))
     }
 }

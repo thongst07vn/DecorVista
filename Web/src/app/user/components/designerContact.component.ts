@@ -1,27 +1,25 @@
 
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { Conect } from '../../../conect';
-import { ProductSevice } from '../../services/product.service';
-import { Product } from '../../entities/product.entity';
+import { Conect } from '../../conect';
+import { ProductSevice } from '../services/product.service';
+import { Product } from '../entities/product.entity';
 import { NgClass } from '@angular/common';
-import { UserService } from '../../services/user.service';
-import { CartService } from '../../services/cart.service';
-import { CartItem } from '../../entities/cartItem.entity';
-import { User } from '../../entities/user.entity';
+import { DesignerService } from '../services/designer.service';
+import { Designer } from '../entities/designer.entity';
 
 
 @Component({
   standalone: true,
   imports: [RouterOutlet,RouterLink,NgClass],
-  templateUrl: './home.component.html',
+  templateUrl: './designerContact.component.html',
   host:{
-    'collision': 'HomeComponent'
+    'collision': 'DesignerContactComponent'
   }
 })
-export class HomeComponent implements OnInit {
-  products: Product[]
-  productsToDisplay: Product[] = []; // Array for displaying current page items
+export class DesignerContactComponent implements OnInit {
+  designer: Designer[]
+  designerToDisplay: Designer[] = []; // Array for displaying current page items
   // Pagination variables
   totalItems: number = 0;
   itemsPerPage: number = 12;
@@ -29,14 +27,13 @@ export class HomeComponent implements OnInit {
   constructor(
     private conect : Conect,
     private productService:ProductSevice,
-    private userService:UserService,
-    private cartService:CartService
+    private designerService:DesignerService
   ){}
   async ngOnInit(){
-    await this.productService.findAllProduct().then(
+    await this.designerService.findall().then(
       res=>{
-        this.products = res as Product[]
-        this.totalItems = this.products?.length || 0; // Assuming products length
+        this.designer = res['result'] as Designer[]
+        this.totalItems = this.designer?.length || 0; // Assuming products length
         this.updateDisplayedProducts(); // Update displayed products on initial load
       },
       error=>{
@@ -70,7 +67,8 @@ export class HomeComponent implements OnInit {
   updateDisplayedProducts() {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage; 
-    this.productsToDisplay = this.products.slice(startIndex, endIndex);
+    this.designerToDisplay = this.designer.slice(startIndex, endIndex);
+    console.log(this.designerToDisplay[0].designerId)
   }
 
   // Event handlers for pagination interactions (implement in your component)
@@ -95,34 +93,5 @@ export class HomeComponent implements OnInit {
   next(){
     return Math.ceil(this.totalItems / this.itemsPerPage)
   }
-  async addToCart(productID:any){
-    await this.userService.findbyemail(JSON.parse(sessionStorage.getItem("loggedInUser"))).then(
-      res=>{
-        if(res['result']){
-          let user = res['result'] as User;
-          const cartItem = new CartItem();
-          cartItem.cartId = user.id;
-          cartItem.productId = productID;
-          cartItem.quantity = 1;
-          this.cartService.addToCart(cartItem).then(
-            res => {
-              if(res['result']){
-                console.log('add success');
-              }
-              else{
-                console.log('add failed')
-              }
-            },
-            error => {
-              console.log(error);
-            }
-          )
-        }
-      },
-      error=>{
-        console.log(error)
-      }
-    )
 
-  }
 }

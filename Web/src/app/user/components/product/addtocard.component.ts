@@ -2,6 +2,10 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Conect } from '../../../conect';
+import { Product } from '../../entities/product.entity';
+import { ProductSevice } from '../../services/product.service';
+import { CartService } from '../../services/cart.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   standalone: true,
@@ -12,8 +16,12 @@ import { Conect } from '../../../conect';
   }
 })
 export class AddtoCardComponent implements OnInit, AfterViewInit {
+  cartItems: any
   constructor(
-    private conect : Conect
+    private conect : Conect,
+    private productService: ProductSevice,
+    private cartService : CartService,
+    private userService : UserService
   ){
 
   }
@@ -40,7 +48,30 @@ export class AddtoCardComponent implements OnInit, AfterViewInit {
     this.conect.addScriptAsync("src/plugins/src/table/datatable/datatables.js")
     this.conect.addScriptAsync("src/plugins/src/table/datatable/button-ext/dataTables.buttons.min.js")
     await this.conect.addScriptAsync("src/assets/js/apps/invoice-list.js")
-    
+    try {
+      const user = await this.userService.findbyemail(JSON.parse(sessionStorage.getItem("loggedInUser")));
+      const cartResult = await this.cartService.innerCart(user['result'].id);
+      if (cartResult['result']) {
+        this.cartItems = []; // Initialize cartItems array
+        for (const item of cartResult['result']) {
+          const product = await this.productService.findProductId(item.productId);
+          this.cartItems.push({
+            id : product['result'].id,
+            name:product['result'].name,
+            brand:product['result'].brand,
+            description:product['result'].description,
+            categoryId:product['result'].categoryId,
+            image:product['result'].image,
+            price:product['result'].price,
+            quantity: item.quantity
+
+        });
+        }
+        console.log(this.cartItems)
+      }
+    } catch (error) {
+      console.error(error);
+    }
     this.conect.reloadPage()
   }
   ngAfterViewInit() {
@@ -54,5 +85,15 @@ export class AddtoCardComponent implements OnInit, AfterViewInit {
   }
   deleteAll(){
     console.log('CCCCCCCCC')
+  }
+  formattedPrice(price: { toString: () => string; }){
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  }
+  truncate(text: string, length: number, suffix: any) {
+    if (text.length > length) {
+      // text = text.replace(/\s+/g, '')
+      return text.substring(0, length) + suffix;
+    }
+    return text; 
   }
 }

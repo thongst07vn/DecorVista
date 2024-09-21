@@ -87,7 +87,7 @@ export class SignUpComponent implements OnInit {
                 res => {
                   if(res['result']){
                     console.log('this account is already exists');
-                    window.location.href = '/'
+                    // window.location.href = '/login'
                   } else {
                     let user = this.registerForm.value;
               console.log(user);
@@ -99,6 +99,8 @@ export class SignUpComponent implements OnInit {
                     res => {
                       if(res['result']){
                         console.log('success')
+                        window.location.href = '/login'
+
                       }
                       else {
                         console.log('failed')
@@ -114,6 +116,7 @@ export class SignUpComponent implements OnInit {
                     res => {
                       if(res['result']){
                         console.log('success create designer')
+                        window.location.href = '/login'
                       }
                       else {
                         console.log('failed')

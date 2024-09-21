@@ -9,7 +9,7 @@ public partial class OrderDetail
 
     public int? UserId { get; set; }
 
-    public int? PaymentId { get; set; }
+    public int? PaymentType { get; set; }
 
     public int? Total { get; set; }
 

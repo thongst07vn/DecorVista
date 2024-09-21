@@ -23,4 +23,10 @@ export class DesignerService{
     async login(email: string, password:string){
         return lastValueFrom(this.httpClient.post(this.baseUrlService.BASE_URL + 'designer/login/',{email,password}));
     }
+    async findall(){
+        return lastValueFrom(this.httpClient.get(this.baseUrlService.BASE_URL + 'designer/findall'));
+    }
+    async findById(productId:number){
+        return lastValueFrom(this.httpClient.get(this.baseUrlService.BASE_URL+'designer/findbyid/'+productId))
+    }
 }

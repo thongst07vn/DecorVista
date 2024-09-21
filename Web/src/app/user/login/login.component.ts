@@ -81,7 +81,7 @@ export class LoginComponent implements OnInit {
           this.userService.login(this.username,this.password).then(
             res => {
               if(res['result']){
-                sessionStorage.setItem("loggedInUser",this.username)
+                sessionStorage.setItem("loggedInUser",JSON.stringify([this.username]))
                 window.location.href = 'user/home'
               }
             }
@@ -93,7 +93,7 @@ export class LoginComponent implements OnInit {
                 this.designerService.login(this.username,this.password).then(
                   res => {
                     if(res['result']){
-                      sessionStorage.setItem("loggedInUser",this.username)
+                      sessionStorage.setItem("loggedInUser",JSON.stringify([this.username]))
                       window.location.href = 'user/home'
                     }
                   }
@@ -138,7 +138,7 @@ export class LoginComponent implements OnInit {
     const account = {
       email: payLoad.email,
       username: payLoad.name,
-      avatar: 'noimg.jpg',
+      avatar: payLoad.picture,
       role: 1 
     }
     this.userService.findbyemail(account.email).then(
@@ -151,7 +151,7 @@ export class LoginComponent implements OnInit {
             res=>{
               if(res['result']){
                 sessionStorage.setItem("loggedInUser",JSON.stringify(account.email))
-                window.location.href = 'user/home'
+                window.location.href = 'user/profile'
               }else{
                 let s = JSON.stringify(account);
                 let formData = new FormData();

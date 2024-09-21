@@ -21,7 +21,7 @@ public partial class User
 
     public virtual ICollection<Address> Addresses { get; set; } = new List<Address>();
 
-    public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
+    public virtual Cart? Cart { get; set; }
 
     public virtual ICollection<Consultation> Consultations { get; set; } = new List<Consultation>();
 

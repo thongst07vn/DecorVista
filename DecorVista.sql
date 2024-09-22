@@ -2,20 +2,16 @@
 use DecorVista
 GO
 
-drop table if exists [payment_details]
-go
 drop table if exists [order_item]
 go
 drop table if exists [order_details]
 go
 drop table if exists [follow]
 go
-drop table if exists [product_attr]
-go
 drop table if exists [products]
+Go
 drop table if exists [categories]
-drop table if exists [sub_categories]
-go
+Go
 drop table if exists [consultations]
 go
 drop table if exists [cart_item]
@@ -71,46 +67,31 @@ CREATE TABLE [categories] (
   [id] integer PRIMARY KEY identity,
   [name] nvarchar(255),
   [description] nvarchar(255),
+  [products_id] integer,
+  
 )
 GO
-
-CREATE TABLE [sub_categories] (
-  [id] integer PRIMARY KEY,
-  [parent_id] integer,
-  [name] nvarchar(255),
-  [description] nvarchar(255),
-  FOREIGN KEY ([parent_id]) REFERENCES [categories](id)
-)
-GO
-
 CREATE TABLE [products] (
   [id] integer PRIMARY KEY identity,
   [name] nvarchar(255),
   [brand] nvarchar(255),
   [description] nvarchar(255),
-  [category_id] int,
   [image] nvarchar(255),
   [price] float,
-  FOREIGN KEY ([category_id]) REFERENCES [sub_categories](id)
+  [color] nvarchar(255),
+  [category_id] int,
+  FOREIGN KEY ([category_id]) REFERENCES [categories](id)
 )
 GO
 
-CREATE TABLE [product_attr] (
-  [id] integer PRIMARY KEY identity,
-  [product_id] int,
-  [name] nvarchar(255),
-  [value] nvarchar(255)
 
-  FOREIGN KEY ([product_id]) REFERENCES [products](id)
-)
-GO
 
 CREATE TABLE [consultations] (
   [id] int PRIMARY KEY IDENTITY,
   [scheduled_time] datetime,
-  [status] nvarchar(255),
+  [status] int,
   [notes] nvarchar(255),
-   [user_id] int FOREIGN KEY REFERENCES [users]([id]),
+  [user_id] int FOREIGN KEY REFERENCES [users]([id]),
   [designer_id] int FOREIGN KEY REFERENCES [designers]([designer_id]),
 )
 GO
@@ -126,9 +107,8 @@ GO
 
 CREATE TABLE [cart] (
   [id] integer PRIMARY KEY,
-  [user_id] integer,
   [total] integer,
-  FOREIGN KEY ([user_id]) REFERENCES [Users](id)
+  FOREIGN KEY ([id]) REFERENCES [Users](id)
 
 )
 GO
@@ -146,7 +126,7 @@ GO
 CREATE TABLE [order_details] (
   [id] integer PRIMARY KEY identity,
   [user_id] integer,
-  [payment_id] integer,
+  [payment_type] integer,
   [total] integer,
   [created_at] Date,
   [updated_at] Date,
@@ -159,8 +139,8 @@ CREATE TABLE [order_item] (
   [order_id] integer,
   [product_id] integer,
   [quantity] integer,
-  FOREIGN KEY ([order_id]) REFERENCES [products](id),
-  FOREIGN KEY ([product_id]) REFERENCES [order_details](id),
+  FOREIGN KEY ([product_id])REFERENCES [products](id),
+  FOREIGN KEY ([order_id]) REFERENCES [order_details](id),
 )
 GO
 
@@ -168,7 +148,8 @@ Create table [chat_box]
 (
 	[user_id] int,
 	[designer_id] int,
-	[chat_day] Date,
+	[chat_day] DATETIME,
+	[chat_type] BIT,
 	[message] nvarchar(255),
   FOREIGN KEY ([user_id]) REFERENCES [Users](id),
   FOREIGN KEY ([designer_id]) REFERENCES [designers]([designer_id]),
